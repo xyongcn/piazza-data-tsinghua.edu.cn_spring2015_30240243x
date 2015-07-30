@@ -1,4 +1,0 @@
-LoginPiazza.py为登录到piazza的脚本
-运行该脚本
-输入您在Piazza注册的用户名及密码
-如果登录成功，会得到与piazza-login-data.txt相似的返回数据。
