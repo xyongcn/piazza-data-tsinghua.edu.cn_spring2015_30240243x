@@ -137,7 +137,7 @@ if select=='1':
         file_name=str(nr)
         saveFile(file_name,data)
 elif select=='2':
-    #获得cid的json数据
+    #获得指定id的json数据
     while(1):
                      
         cid=input('请输入讨论记录的id(例如：https://piazza.com/class/i5j09fnsl7k5x0?cid=493的id为493)：')
