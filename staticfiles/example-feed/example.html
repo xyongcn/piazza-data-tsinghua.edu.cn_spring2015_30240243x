@@ -1,0 +1,108 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="handlebars-v3.0.3.js"></script>
+<script type="text/javascript" src="piazza_feed.js"></script>
+    <link type="text/css" href="dashboard_feed.css" rel="stylesheet">
+ <title>Handlebars demo</title>
+</head>
+<body>
+<input type = "text" value = "lab1" id = "label" /></input>
+<input type="button" value = "search" id='btn_read' /></input>
+
+
+	<div id="page_main" class="has_popular_tags_bar">
+        <div class="bars" id="bars">
+            <div id="popular_tags_bar" class="dashboard_toolbar">
+            <span class="folder_icon"></span>
+            <ul id="popular_tags_list" class="clearFix">
+                <!-- placeholders-->
+
+
+                <li ><a class="tag folder">lab1</a></li>
+                <li ><a class="tag folder">lab2</a></li>
+                <li ><a class="tag folder">lab3</a></li>
+                <li ><a class="tag folder">lab4</a></li>
+                <li ><a class="tag folder">lab5</a></li>
+                <li ><a class="tag folder">lab6</a></li>
+                <li ><a class="tag folder">lab7</a></li>
+                <li ><a class="tag folder">lab8</a></li>
+                <li ><a class="tag folder">通知</a></li>
+
+
+            </ul>
+            </div>
+        </div>
+        <div class ="views" id="views">
+
+            <div id ="feed" class="page_feed">
+
+
+
+            </div>
+
+        </div>
+
+	</div>
+
+
+
+
+    <!--feed部分的js模板 显示某一个讨论记录的索引列表-->
+    <script id="feed-template" type="text/x-handlebars-template">
+
+
+        {{#with result}}
+
+        <div id="question_feed_questions" class="scrollable" style="top: 0">
+            {{!-- 按组显示（遍历所有组） --}}
+            {{#each feed}}
+
+
+
+            <div class="question_group">
+                <div class="start_open page_feed_bucket_header">
+                    <span>▾{{{bucket_name}}}</span>
+                </div>
+
+                <ul id="bucket_pin-item-list" class="item-list-in-bucket">
+                    {{!-- 显示该组的所有项目（遍历该组） --}}
+                    <li class="feed_item clearfix note " id="{{id}}" onclick="">
+                        {{!--日期 --}}
+                        <div class="metadata">
+                            <div class="timestamp">{{{modified}}}</div>
+                        </div>
+                        {{!--内容 --}}
+                        <div class="content">
+                            {{!--标题 --}}
+                            <div class="title ellipses">
+                                <span class="private_icon" style="display:block;">
+                                    <span class="title_text" style="max-width: 176px;">
+                                        {{{subject}}}
+                                    </span>
+                                </span>
+                            </div>
+                            {{!--内容片段 --}}
+                            <div class="snippet">
+                                {{{content_snipet}}}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+             </div>
+            {{/each}}
+        </div>
+        {{/with}}
+
+    </script>
+
+
+
+
+</body>
+</html>
+

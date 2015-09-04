@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="handlebars-v3.0.3.js"></script>
+<script type="text/javascript" src="piazza_cid.js "></script>
+    <link type="text/css" href="dashboard_cid.css" rel="stylesheet">
+
+</head>
+<body>
+please input cid:<input type = "text" value = "333" id = "cid"/></input>
+<input type="button" value = "read" id='btn_read'/></input>
+
+	<div id="page_main" >
+        <div class ="views" id="views">
+            <div id ="page_center" style=" left: 0px; bottom: 0px;">
+
+            </div>
+            <div id ="feed" class="page_feed">
+
+            </div>
+
+        </div>
+
+	</div>
+
+    <script id="page-center-template" type="text/x-handlebars-template">
+        {{!-- 通知的内容 --}}
+        {{#with result}}
+        <div id="23orij23" class="post_region_box question_note_view dashboard_element">
+
+            <div class="post_region_content note" id="view_question_note" >
+                {{#each history}}
+                <h1 class="post_region_title"> {{{subject}}}</h1>
+                <div class="post_region_text" id="questionText" >{{{content}}}</div>
+                {{/each}}
+            </div>
+        </div>
+        {{#each children}}
+
+        {{!-- followup discussion --}}
+        {{#compare type 'followup'}}
+
+        <div id="clarifying_discussion" class="post_region_box clarifying_discussion dashboard_element">
+            <div class="post_region_header clearFix">
+                <div class="post_title">followup discussions</div>
+                <div class="post_subtitle">for lingering questions and comments</div>
+
+            </div>
+            {{!-- 列出所有讨论（遍历） --}}
+
+            <div class="post_region_content clarifying_discussion">
+                {{!-- 对每一个讨论内容 --}}
+
+                <div class="clarifying_discussion clearFix" id="{{children.id}}">
+                    <div class="discussion_content main_followup clearFix">
+                        <div class="discussion_text">
+                            <span class="actual_text post_region_text">
+                                {{{subject}}}
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+                {{#each children}}
+
+                {{!-- 对每一个讨论的回复(遍历) --}}
+                <div class="all_replies">
+                    <div class="discussion_replies existing_reply clearFix">
+                        <div class="discussion_text">
+                            <span class="actual_reply_text post_region_text">
+                                {{{subject}}}
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                {{/each}}
+
+
+
+            </div>
+
+        </div>
+
+        {{/compare}}
+
+        {{#if history}}
+        {{#each history}}
+
+        {{!-- the students' answer --}}
+        {{#compare type 's_answer'}}
+        <div id="member_answer" class="dashboard_element">
+            <div class="post_region_box answer" id="s_answer">
+                <div class="post_region_header clearFix">
+                    <div class="post_icon s_answer"></div>
+                    <div class="post_title">the students' answer,</div>
+                    <div class="post_subtitle">where students collectively construct a single answer</div>
+                </div>
+                <div class="post_region_content view_mode">
+                    <div class="post_region_text">
+                        {{{content}}}
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        {{else}}
+
+
+        {{!-- the instructors'' answer --}}
+
+        <div id="instructor_answer" class="dashboard_element">
+            <div class="post_region_box answer" id="i_answer">
+                <div class="post_region_header clearFix">
+                    <div class="post_icon i_answer"></div>
+                    <div class="post_title">the instructors' answer,</div>
+                    <div class="post_subtitle">where instructors collectively construct a single answer</div>
+                </div>
+                <div class="post_region_content view_mode">
+                    <div class="post_region_text">{{{content}}}</div>
+
+                </div>
+            </div>
+        </div>
+
+        {{/compare}}
+        {{/each}}
+        {{/if}}
+
+        {{/each}}
+        {{/with}}
+    </script>
+
+
+
+
+</body>
+</html>
+
+
+
