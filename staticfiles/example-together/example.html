@@ -1,46 +1,26 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="handlebars-v3.0.3.js"></script>
-<script type="text/javascript" src="piazza_all.js"></script>
+<script type="text/javascript" src="piazza_together.js"></script>
     <link type="text/css" href="dashboard_all.css" rel="stylesheet">
  <title>piazza_show_all</title>
 </head>
 <body>
-<div class="navbar top_bar" id="top_bar" align="center" >
-  piazza 讨论区-操作系统课程
+<div class="navbar top_bar" id="top_bar" align="center">
+                
+                 piazza 讨论区-操作系统课程
 </div>
 
 	<div id="page_main" class="has_popular_tags_bar">
         <div class="bars" id="bars">
             <div id="popular_tags_bar" class="dashboard_toolbar">
-            <span class="folder_icon"></span>
-            <ul id="popular_tags_list" class="clearFix">
+            
                 <!-- placeholders-->
-
-
-                <li ><a class="tag folder">lab1</a></li>
-                <li ><a class="tag folder">lab2</a></li>
-                <li ><a class="tag folder">lab3</a></li>
-                <li ><a class="tag folder">lab4</a></li>
-                <li ><a class="tag folder">lab5</a></li>
-                <li ><a class="tag folder">lab6</a></li>
-                <li ><a class="tag folder">lab7</a></li>
-                <li ><a class="tag folder">lab8</a></li>
-                <li ><a class="tag folder">通知</a></li>
-
-
-
-
-
-                <input type="button" value = "search" id='btn_read' /></input>
-                <input type = "text" value = "lab1" id = "label" /></input>
-
-
-
-            </ul>
+                
+            
             </div>
         </div>
 
@@ -50,17 +30,52 @@
             </div>
             <div id ="feed" class="page_feed">
 
-
             </div>
 
         </div>
-
 	</div>
 
+
+        <!-- popular_tags_list的js模板 动态显示标签-->
+	<script id="popular-tags-bar-template" type="text/x-handlebars-template">
+            
+             
+            <span class="folder_icon"></span>
+            <ul id="popular_tags_list" class="clearFix">
+                <!-- 下拉菜单-->
+              <li >
+                <label>按标签筛选</label>
+                <select name="select_label" id="select_label" onchange="click_select_label(this)" >
+                   {{#with result.tags.instructor}}
+                      {{#each this}}
+                        <option value="{{this}}" >{{this}}</option>
+                     {{/each}}                          
+                   {{/with}}
+                   
+                 </select>
+               </li>
+
+                <!-- popular标签列表-->
+                 {{#with result.tags.popular}}
+                    
+                    {{#each this}}
+
+                          <li ><a class="tag folder" id="{{this}}" onclick="click_tags(id)">{{this}}</a></li>
+                    {{/each}}
+                           
+                 {{/with}}
+                           
+               
+            </ul>  
+        </script>
+    
 
     <!--page_center的js模板 显示某一个id对应的讨论记录-->
 	<script id="page-center-template" type="text/x-handlebars-template">
         {{!-- 通知的内容 --}}
+         <div>
+        
+         </div>
         <div id="history_slider_wrapper" class="dashboard_element">
             <div id="history_slider">
                 <div id="question_history_slider_wrapper"></div>

@@ -1,4 +1,4 @@
-"""Setup for piazza_all XBlock."""
+"""Setup for piazza XBlock."""
 
 import os
 from setuptools import setup
@@ -21,19 +21,19 @@ def package_data(pkg, roots):
 
 
 setup(
-    name='piazza_all-xblock',
+    name='piazza-xblock',
     version='0.1',
-    description='piazza_all XBlock',   # TODO: write a better description.
+    description='piazza XBlock',   # TODO: write a better description.
     packages=[
-        'piazza_all',
+        'piazza',
     ],
     install_requires=[
         'XBlock',
     ],
     entry_points={
         'xblock.v1': [
-            'piazza_all = piazza_all:PiazzaAllXBlock',
+            'piazza = piazza:PiazzaXBlock',
         ]
     },
-    package_data=package_data("piazza_all", ["static", "public"]),
+    package_data=package_data("piazza", ["static", "public"]),
 )

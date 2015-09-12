@@ -7,14 +7,10 @@ from xblock.fields import Scope, Integer
 from xblock.fragment import Fragment
 
 
-class PiazzaAllXBlock(XBlock):
+class PiazzaXBlock(XBlock):
     """
-    XBlock for piazza.
+    piazza XBlock to show content according to cid
     """
-
-    # Fields are defined on the class.  You can access them in your code as
-    # self.<fieldname>.
-
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
@@ -24,28 +20,28 @@ class PiazzaAllXBlock(XBlock):
     # TO-DO: change this view to display your data your own way.
     def student_view(self, context=None):
         """
-        The primary view of the PiazzaAllXBlock, shown to students
+        The primary view of the PiazzaXBlock, shown to students
         when viewing courses.
         """
-        html = self.resource_string("static/html/piazza_all.html")
+        html = self.resource_string("static/html/piazza.html")
         frag = Fragment(html.format(self=self))
-        frag.add_css(self.resource_string("static/css/piazza_all.css"))
-        frag.add_javascript(self.resource_string("static/js/src/piazza_all.js"))
-        frag.initialize_js('PiazzaAllXBlock')
+        frag.add_css(self.resource_string("static/css/piazza.css"))
+        frag.add_javascript(self.resource_string("static/js/src/piazza.js"))
+
+        frag.initialize_js('PiazzaXBlock')
         return frag
 
-  
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.
     @staticmethod
     def workbench_scenarios():
         """A canned scenario for display in the workbench."""
         return [
-            ("PiazzaAllBlock",
+            ("PiazzaXBlock",
              """<vertical_demo>
-                <piazza_all/>
-                <piazza_all/>
-                <piazza_all/>
+                <piazza/>
+                <piazza/>
+                <piazza/>
                 </vertical_demo>
              """),
         ]

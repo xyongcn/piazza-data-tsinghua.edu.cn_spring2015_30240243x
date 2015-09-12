@@ -9,30 +9,15 @@
  <title>Handlebars demo</title>
 </head>
 <body>
-<input type = "text" value = "lab1" id = "label" /></input>
-<input type="button" value = "search" id='btn_read' /></input>
+
+               
+         
 
 
 	<div id="page_main" class="has_popular_tags_bar">
         <div class="bars" id="bars">
             <div id="popular_tags_bar" class="dashboard_toolbar">
-            <span class="folder_icon"></span>
-            <ul id="popular_tags_list" class="clearFix">
-                <!-- placeholders-->
-
-
-                <li ><a class="tag folder">lab1</a></li>
-                <li ><a class="tag folder">lab2</a></li>
-                <li ><a class="tag folder">lab3</a></li>
-                <li ><a class="tag folder">lab4</a></li>
-                <li ><a class="tag folder">lab5</a></li>
-                <li ><a class="tag folder">lab6</a></li>
-                <li ><a class="tag folder">lab7</a></li>
-                <li ><a class="tag folder">lab8</a></li>
-                <li ><a class="tag folder">通知</a></li>
-
-
-            </ul>
+            
             </div>
         </div>
         <div class ="views" id="views">
@@ -48,7 +33,37 @@
 	</div>
 
 
+        <!-- popular_tags_list的js模板 动态显示标签-->
+	<script id="popular-tags-bar-template" type="text/x-handlebars-template">
+            
+             
+            <span class="folder_icon"></span>
+            <ul id="popular_tags_list" class="clearFix">
+                <!-- 下拉菜单-->
+                 <li>
+                 <label>按标签筛选</label>
+                <select name="select_label" id="select_label" onchange="click_select_label(this)" >
+                   {{#with result.tags.instructor}}
+                      {{#each this}}
+                        <option value="{{this}}" >{{this}}</option>
+                     {{/each}}                          
+                   {{/with}}
+                   
+                 </select>
+                </li>
+                <!-- popular标签列表-->
+                 {{#with result.tags.popular}}
+                    
+                    {{#each this}}
 
+                          <li ><a class="tag folder" id="{{this}}" onclick="click_tags(id)">{{this}}</a></li>
+                    {{/each}}
+                           
+                 {{/with}}
+                           
+               
+            </ul>  
+        </script>
 
     <!--feed部分的js模板 显示某一个讨论记录的索引列表-->
     <script id="feed-template" type="text/x-handlebars-template">
