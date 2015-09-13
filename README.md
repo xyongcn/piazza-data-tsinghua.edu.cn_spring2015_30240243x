@@ -1,8 +1,12 @@
 # piazza-data-tsinghua.edu.cn_spring2015_30240243x
 Piazza discussion data for https://piazza.com/tsinghua.edu.cn/spring2015/30240243x/home
 
-һ��program�а�����piazza��ȡ���ݵĳ����Լ��Եõ���json���ݽ��н����ĳ���
+一、program中包含从piazza获取数据的程序，以及对得到的json数据进行解析的程序
 
-����data�а�������piazza��õ�����
+二、data中包含的是piazza获得的数据。
 
-��ϸ��˵��λ��ÿ���ļ�����
+三、piazzaXBlock是用于集成到Open edX平台的XBlock.包括三个xblock.详细说明位于该文件夹内。
+
+四、staticfiles包括的是数据解析的具体代码，安装xblock时也会用到。详细说明位于该文件夹内。
+
+详细的说明位于每个文件夹中
