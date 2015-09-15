@@ -35,9 +35,15 @@
   
   有关handlebars的使用
      
-       官网： http://handlebarsjs.com/
+   官网： 
+   http://handlebarsjs.com/
        
-       有用的博客：http://www.cnblogs.com/iyangyuan/archive/2013/12/12/3471227.html
-                   http://blog.csdn.net/jyy_12/article/details/7937712
-                   http://www.thinksaas.cn/group/topic/345756/
-                   https://software.intel.com/zh-cn/articles/HTML5Handlebars
+   有用的博客:
+   
+   http://www.cnblogs.com/iyangyuan/archive/2013/12/12/3471227.html
+   
+   http://blog.csdn.net/jyy_12/article/details/7937712
+   
+   http://www.thinksaas.cn/group/topic/345756/
+   
+   https://software.intel.com/zh-cn/articles/HTML5Handlebars
