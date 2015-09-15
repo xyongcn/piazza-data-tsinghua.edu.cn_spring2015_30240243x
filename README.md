@@ -6,7 +6,7 @@ Piazza discussion data for https://piazza.com/tsinghua.edu.cn/spring2015/3024024
 详细说明见：
  https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/blob/master/data/README.md
 
-   二、piazzaXBlock是用于集成到Open edX平台的XBlock.包括三个xblock.详细说明位于该文件夹内。
+   二、piazzaXBlock是用于集成到Open edX平台的XBlock.包括三个xblock.
    
  详细说明见：
 https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree/master/piazzaXBlock
@@ -16,8 +16,8 @@ https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree
 详细说明见：
 https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree/master/program
 
- 四、staticfiles包括的是数据解析的具体代码，安装xblock时也会用到。详细说明位于该文件夹内。
-   
+ 四、staticfiles包括的是数据解析的具体代码，安装xblock时也会用到。
+ 
 详细说明见：
  https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree/master/staticfiles
 
