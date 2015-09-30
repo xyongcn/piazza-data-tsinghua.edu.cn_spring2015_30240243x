@@ -6,12 +6,16 @@
 <script type="text/javascript" src="handlebars-v3.0.3.js"></script>
 <script type="text/javascript" src="piazza_feed.js"></script>
     <link type="text/css" href="dashboard_feed.css" rel="stylesheet">
- <title>Handlebars demo</title>
+ <title>Piazza-show-feed</title>
 </head>
 <body>
 
-               
-         
+
+<div class="navbar top_bar" id="top_bar" align="left ">
+
+
+
+</div>
 
 
 	<div id="page_main" class="has_popular_tags_bar">
@@ -39,18 +43,7 @@
              
             <span class="folder_icon"></span>
             <ul id="popular_tags_list" class="clearFix">
-                <!-- 下拉菜单-->
-                 <li>
-                 <label>按标签筛选</label>
-                <select name="select_label" id="select_label" onchange="click_select_label(this)" >
-                   {{#with result.tags.instructor}}
-                      {{#each this}}
-                        <option value="{{this}}" >{{this}}</option>
-                     {{/each}}                          
-                   {{/with}}
-                   
-                 </select>
-                </li>
+
                 <!-- popular标签列表-->
                  {{#with result.tags.popular}}
                     
@@ -115,7 +108,33 @@
 
     </script>
 
+    <!-- navbar top_bar的js模板 多级联动下拉菜单-->
+    <script id="select-linkage-template" type="text/x-handlebars-template">
+        <!-- 第一级下拉菜单-->
+        {{#if result}}
+        多级筛选：
+        <select name="select_label" id="select_label_1" onchange="click_select_label(this)" >
 
+            {{#with result.tags.instructor}}
+            {{#each this}}
+            <option value="{{this}}" >{{this}}</option>
+            {{/each}}
+            {{/with}}
+
+        </select>
+        {{/if}}
+        {{#if parent}}
+        {{#with this}}
+
+        {{#each children}}
+        <option value="{{ids}}" >{{tag}}</option>
+        {{/each}}
+
+        {{/with}}
+        {{/if}}
+
+
+    </script>
 
 
 </body>

@@ -42,6 +42,7 @@
 <script id="select-linkage-template" type="text/x-handlebars-template">
     <!-- 第一级下拉菜单-->
     {{#if result}}
+    多级筛选：
     <select name="select_label" id="select_label_1" onchange="click_select_label(this)" >
 
         {{#with result.tags.instructor}}
