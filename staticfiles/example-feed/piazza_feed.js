@@ -1,7 +1,7 @@
-
+﻿
 
 $(document).ready(function(){
-    
+
     //注册一个比较大小的Helper,判断v1是否等于于v2
     Handlebars.registerHelper("compare",function(v1,v2,options){
         if(v1==v2){
@@ -14,19 +14,19 @@ $(document).ready(function(){
         }
     });
 
-     //页面加载时feed部分显示的是my_feed的内容 
-     url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/piazza_my_feed.txt";
-            $.ajax({
-                type : "get",
-                cache : false,
-                url : url_github , // 请求地址
-                success : function(data) { // ajax执行成功后执行的方法
-                    var data_json = eval("(" + data + ")"); // 把string转化为json
-                    var source_feed = $("#feed-template").html();
-                    var template_feed = Handlebars.compile(source_feed);
-                    var html_feed = template_feed(data_json);
-                    $("#feed").html(html_feed);}
-            });
+    //页面加载时feed部分显示的是my_feed的内容
+    url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/piazza_my_feed.txt";
+    $.ajax({
+        type : "get",
+        cache : false,
+        url : url_github , // 请求地址
+        success : function(data) { // ajax执行成功后执行的方法
+            var data_json = eval("(" + data + ")"); // 把string转化为json
+            var source_feed = $("#feed-template").html();
+            var template_feed = Handlebars.compile(source_feed);
+            var html_feed = template_feed(data_json);
+            $("#feed").html(html_feed);}
+    });
 
 
     //页面加载时popular_tags_bar部分显示的是popular tags的内容 ，导航栏显示第一级下拉菜单
@@ -59,21 +59,21 @@ $(document).ready(function(){
 
 
 //点击列出的标签，显示对应的feed部分
-   function click_tags(label){
-           
-            url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/filter_feed_"+label +".json";
-            $.ajax({
-                type : "get",
-                cache : false,
-                url : url_github , // 请求地址
-                success : function(data) { // ajax执行成功后执行的方法
-                    var data_json = eval("(" + data + ")"); // 把string转化为json
-                    var source_feed = $("#feed-template").html();
-                    var template_feed = Handlebars.compile(source_feed);
-                    var html_feed = template_feed(data_json);
-                    $("#feed").html(html_feed);}
-            });
-        }
+function click_tags(label){
+
+    url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/filter_feed_"+label +".json";
+    $.ajax({
+        type : "get",
+        cache : false,
+        url : url_github , // 请求地址
+        success : function(data) { // ajax执行成功后执行的方法
+            var data_json = eval("(" + data + ")"); // 把string转化为json
+            var source_feed = $("#feed-template").html();
+            var template_feed = Handlebars.compile(source_feed);
+            var html_feed = template_feed(data_json);
+            $("#feed").html(html_feed);}
+    });
+}
 
 
 
@@ -135,9 +135,8 @@ function gen_next_list(parent,json_data){
         //取arr1和arr2的并集
         mergeArray(arr1,arr2);
     }
-
-
-    //遍历合并后的数组arr1，遍历json_data。找出每一个二级标签对应的id.
+    removeVal(arr1,parent);
+      //遍历合并后的数组arr1，遍历json_data。找出每一个二级标签对应的id.
     var next_data='{"parent":"'+parent+'","children":[';
 
     for(i=0;i<arr1.length;i++)
@@ -277,6 +276,25 @@ function clickSelect(value,parent,next_data)
 }
 
 /***
+ *
+ * @param arr:待删除的数组
+ * @param val：删除的元素
+ * @returns {*}：删除指定元素后的数组
+ */
+function removeVal(arr,val){
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == val){
+            if (i > -1) {
+                arr.splice(i, 1);
+            }
+
+        }
+    }
+    return arr;
+}
+
+
+/***
  * 生成下一级（第三级及以后）下拉菜单的json数据
  * @param IdArray ：当前级下拉菜单选中项所对应的id列表
  * @param select_text：当前级下拉菜单选中项的值
@@ -306,7 +324,7 @@ function gen_next_taglist(IdArray,select_text,next_data){
         }
         mergeArray (arr1,arr2);
     }
-
+    removeVal(arr1,select_text);
     //next_data_new是生成的下一级下拉菜单的json数据
     var next_data_new={};
     next_data_new["parent"]=select_text;
@@ -414,3 +432,10 @@ function find_feed(data,IdArray,parent){
 
 
 
+/**
+ * Created with PyCharm.
+ * User: JennyZhang
+ * Date: 15-10-8
+ * Time: 下午5:31
+ * To change this template use File | Settings | File Templates.
+ */
