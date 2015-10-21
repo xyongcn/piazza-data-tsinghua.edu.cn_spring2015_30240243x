@@ -28,7 +28,7 @@ $(document).ready(function(){
                     $("#feed").html(html_feed);}
             });
      
-     //页面加载时page_center部分显示的是cid=1的内容 
+     //页面加载时page_center部分显示的是cid=1的内容,即piazza的欢迎页面
      var source = $("#page-center-template").html();
      var template = Handlebars.compile(source);
      url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data/1.json";
@@ -119,11 +119,10 @@ function clickLi(cid)
 
 
 
-//一级下拉菜单列出所有标签,选择后显示在feed部分
+//一级下拉菜单列出所有标签,选择后显示在feed部分，同时根据第一级所选定的标签生成下一级的标签列表和下一级下拉菜单
 function click_select_label(obj){ 
   var opt = obj.options[obj.selectedIndex]
-
-    var label=opt.text;
+  var label=opt.text;
   url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/filter_feed_"+label +".json";
             $.ajax({
                 type : "get",
@@ -135,18 +134,18 @@ function click_select_label(obj){
                     var template_feed = Handlebars.compile(source_feed);
                     var html_feed = template_feed(data_json);
                     $("#feed").html(html_feed);
+                    //根据第一级所选定的标签生成下一级标签列表
                     var next_data=gen_next_list (label ,data_json);
-                    next_data = eval("(" + next_data + ")"); // 把string转化为json
-                    addNextSbiling(obj.id,label,next_data);
 
+                    next_data = eval("(" + next_data + ")"); // 把string转化为json
+                    //添加一个<select>标签
+                    addNextSbiling(label,obj.id,label,next_data);
+                    //由next_data作为数据源，利用js模板生成下拉菜单
                     var source_select = $("#select-linkage-template").html();
                     var template_select = Handlebars.compile(source_select);
                     var html_select = template_select(next_data);
                     var ID="#"+label;
                     $(ID).html(html_select);
-
-
-
                 }
             });
 
@@ -163,25 +162,20 @@ function gen_next_list(parent,json_data){
     var arr1 = [];
     var arr2=[];
     //先把result.feed对象下的第一组tags保存到数组arr1中
-    for( j=0;j<json_data.result.feed[0].tags.length ;j++)
+    for(j=0;j<json_data.result.feed[0].tags.length ;j++)
     {
         arr1.push(json_data.result.feed[0].tags[j])
     }
     //遍历feed第一组之后的所有组tags，与前一组tags做并集，最后取得feed中的所有tags.结果保存在arr1中
-    for(var i=1;i<json_data.result.feed.length;i++)
+    for(i=1;i<json_data.result.feed.length;i++)
         {
         for(j=0;j<json_data.result.feed[i].tags.length ;j++)
         {
-
             arr2.push(json_data.result.feed[i].tags[j]);
-
         }
         //取arr1和arr2的并集
         mergeArray(arr1,arr2);
     }
-      //从合并后的数组中删除上一级菜单选中的标签
-
-     removeVal(arr1,parent);
 
 
     //遍历合并后的数组arr1，遍历json_data。找出每一个二级标签对应的id.
@@ -251,24 +245,6 @@ function gen_next_list(parent,json_data){
         return next_data;
 }
 
-/***
- * 删除数组中指定元素
- * @pam arr:待删除的数组
- * @param val：要删除的元素
- * 返回删除指定元素后的数组
- */
-function removeVal(arr,val){
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] == val){
-            if (i > -1) {
-                arr.splice(i, 1);
-            }
-
-        }
-    }
-    return arr;
-}
-
 
 /***
  * 合并数组的函数
@@ -299,11 +275,13 @@ function mergeArray(arr1, arr2) {
 
 /***
  * 添加下一个兄弟节点
+ *  @param nodeId:第一级下拉菜单中选中的标签，
  * @param nodeId ：当前的节点id
  * @param select_id; 创建的兄弟节点id
+ * @param select_id; 上一级生成的json数据
  * 调用该函数后会首先删除当前节点之后的所有兄弟节点，然后以select_id为id创建一个新的兄弟节点。
  */
-function addNextSbiling(nodeId,select_id,next_data) {
+function addNextSbiling(select_1,nodeId,select_id,next_data) {
 
     //删除当前节点之后的所有兄弟节点
     $("#"+nodeId).nextAll().remove();
@@ -313,7 +291,7 @@ function addNextSbiling(nodeId,select_id,next_data) {
    //设置 div 属性，如 id
    mySelect.setAttribute("id", select_id);
     mySelect.addEventListener('change',function(){
-        return clickSelect.apply(this,[this.value,select_id,next_data]);
+        return clickSelect.apply(this,[select_1,this.value,select_id,next_data]);
     });
     //为当前节点添加一个兄弟节点，以当前节点选中的值为新id
    currentNode.parentNode.appendChild(mySelect);
@@ -322,17 +300,19 @@ function addNextSbiling(nodeId,select_id,next_data) {
 
 /***
  * 选中第二级（及以后）菜单的某一项
+ * @param value：第一级下拉菜单选中的标签值
  * @param value：选中的标签对应的ids
  * @param parent:当前选中的标签做为下一级select的id
  * @param next_data:当前下拉菜单对应的json数据
  */
-function clickSelect(value,parent,next_data)
+function clickSelect(select_1,value,parent,next_data)
 {
     var obj=this.options[this.selectedIndex];
-    mychange(value,obj.text);
+    upd_feed (value,select_1);
     var IdArray = value.split(",");
     var next_data_new=gen_next_taglist(IdArray,obj.text,next_data);
-    addNextSbiling(this.id,obj.text,next_data_new);
+
+    addNextSbiling(select_1,this.id,obj.text,next_data_new);
     var source_select = $("#select-linkage-template").html();
     var template_select = Handlebars.compile(source_select);
     var html_select = template_select(next_data_new);
@@ -372,8 +352,6 @@ function gen_next_taglist(IdArray,select_text,next_data){
         mergeArray (arr1,arr2);
     }
 
-    removeVal (arr1,select_text);
-
    //next_data_new是生成的下一级下拉菜单的json数据
     var next_data_new={};
     next_data_new["parent"]=select_text;
@@ -383,27 +361,42 @@ function gen_next_taglist(IdArray,select_text,next_data){
     for (i=0;i<arr1.length;i++){
         next_data_new["children"][i]={};
         next_data_new["children"][i]["tag"]=arr1[i];
+
         //遍历next_data，得到每一个tag对应的id.
         for(j=0;j<next_data.children.length;j++){
             if(arr1[i]==next_data.children[j].tag){
                 next_data_new["children"][i]["ids"]=[];
+                num=0;
                 for(k=0;k<next_data.children[j].ids.length;k++){
-                    next_data_new["children"][i]["ids"][k]=next_data.children[j].ids[k];
+                    for(p=0;p<IdArray.length;p++){
+                        if(next_data.children[j].ids[k]==parseInt(IdArray[p]))
+                        {
+
+
+
+                            next_data_new["children"][i]["ids"][num]=next_data.children[j].ids[k];
+                            num+=1;
+                            break;
+                        }
+                    }
+
+
                 }
 
             }
 
         }
     }
+
     return next_data_new;
 }
 
 /***
  * 更新feed部分
  * @param value：当前下拉菜单选中的标签对应的id列表
- * @param parent：当前下拉菜单选中的标签值
+ * @param parent：当前第一级下拉菜单选中的标签值
  */
-function mychange(value,parent)
+function upd_feed(value,parent)
 {
 
     var IdArray = value.split(",");
@@ -429,7 +422,7 @@ function mychange(value,parent)
 /***
  * 根据下拉菜单的选中项，筛选出对应的id列表
  * @param data：是第一级的标签筛选结果。
- * @param IdArray：是本次（第二级及以手）筛选结果的id列表，以数组方式存放。
+ * @param IdArray：是本次（第二级及以后）筛选结果的id列表，以数组方式存放。
  * @param parent：是第一级选中的标签
  * @returns json对象，本次筛选结果的json对象
  */
@@ -478,7 +471,5 @@ function find_feed(data,IdArray,parent){
 
 
 }
-
-
 
 

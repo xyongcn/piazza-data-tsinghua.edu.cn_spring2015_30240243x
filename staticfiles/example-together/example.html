@@ -5,6 +5,7 @@
     <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="handlebars-v3.0.3.js"></script>
     <script type="text/javascript" src="piazza_together.js"></script>
+
     <link type="text/css" href="dashboard_all.css" rel="stylesheet">
     <title>piazza_show_all</title>
 </head>
@@ -40,8 +41,9 @@
 
 <!-- navbar top_bar的js模板 多级联动下拉菜单-->
 <script id="select-linkage-template" type="text/x-handlebars-template">
-    <!-- 第一级下拉菜单-->
+
     {{#if result}}
+    <!-- 第一级下拉菜单-->
     多级筛选：
     <select name="select_label" id="select_label_1" onchange="click_select_label(this)" >
 
