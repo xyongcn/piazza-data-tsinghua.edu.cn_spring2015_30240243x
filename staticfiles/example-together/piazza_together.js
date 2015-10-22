@@ -164,19 +164,22 @@ function gen_next_list(parent,json_data){
     //先把result.feed对象下的第一组tags保存到数组arr1中
     for(j=0;j<json_data.result.feed[0].tags.length ;j++)
     {
+        if(json_data.result.feed[0].tags[j]!=parent)
+        {
         arr1.push(json_data.result.feed[0].tags[j])
+        }
     }
     //遍历feed第一组之后的所有组tags，与前一组tags做并集，最后取得feed中的所有tags.结果保存在arr1中
     for(i=1;i<json_data.result.feed.length;i++)
         {
         for(j=0;j<json_data.result.feed[i].tags.length ;j++)
         {
-            arr2.push(json_data.result.feed[i].tags[j]);
+            if(json_data.result.feed[i].tags[j]!=parent)
+            {arr2.push(json_data.result.feed[i].tags[j]);}
         }
         //取arr1和arr2的并集
         mergeArray(arr1,arr2);
     }
-
 
     //遍历合并后的数组arr1，遍历json_data。找出每一个二级标签对应的id.
     var next_data='{"parent":"'+parent+'","children":[';
@@ -339,10 +342,10 @@ function gen_next_taglist(IdArray,select_text,next_data){
     for(i=0;i<next_data.children.length;i++)
     {
         for(j=0;j<next_data.children[i].ids.length;j++){
-        if(parseInt(IdArray[k])==next_data.children[i].ids[j]){
+        if(parseInt(IdArray[k])==next_data.children[i].ids[j] && select_text != next_data.children[i].tag){
             arr2.push(next_data.children[i].tag);
             flag+=1;
-                if(flag==1){
+                if(flag==1&& select_text != next_data.children[i].tag){
                 arr1.push(next_data.children[i].tag);
                 }
             break;
