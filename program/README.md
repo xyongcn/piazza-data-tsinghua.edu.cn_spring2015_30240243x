@@ -37,3 +37,37 @@
   “对数据解析／static”中包含的是一个简单的解析版本，完善后的版本位于“staticfiles”文件夹中。
   
   https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree/master/staticfiles
+  
+四、自动从piazza获取有更新的数据，并同步到github仓库。
+     1. upd-data.py  实现以下三方面功能：
+     
+       （1）.登录piazza平台
+       （2）.从piazza获取返回数据（对数据解析可获得所有记录的更新时间），
+       （3）.检测这一天内是否有更新，并获取更新
+       （4）.更新后的数据同步到github仓库,
+       （5）.同时生成日志piazza_log.log
+     
+     upd-data.py该文件用于IBM的EDX机器上。路径为为：/home/zyni/piazza-upd/upd-data.py
+     生成的日志位于：/home/zyni/piazza-upd/piazza_log.log
+     
+    2.定时执行脚本（upd-data.py）的实现：
+    
+    具体的方法为：
+    
+    利用crontab创建定时任务：
+    
+      crontab -e
+    
+    输入下面的命令：
+    
+      30 23 * * * /usr/bin/python /home/zyni/piazza-upd/upd-data.py >/home/zyni/piazza-upd/piazza_log_today.log 2>&1
+     
+     每天的23:30，执行脚本 upd-data.py。把本次执行该脚本输出的结果记录在piazza_log_today.log
+     所有的日志记录在piazza_log.log。
+     
+     注意：
+      piazza_log_today.log：只是本次的日志，仅记录更新时间，以及有无实际更新
+      piazza_log.log：记录了所有的日志详细信息。
+      
+    
+    
