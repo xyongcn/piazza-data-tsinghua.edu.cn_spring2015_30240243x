@@ -70,8 +70,10 @@
     所有的日志记录在piazza_log.log。
      
     注意：
-    piazza_log_today.log：只是本次的日志，仅记录更新时间，以及有无实际更新
-    piazza_log.log：记录了所有的日志详细信息。
+
+         piazza_log_today.log：只是本次的日志，仅记录更新时间，以及有无实际更新
+
+         piazza_log.log：记录了所有的日志详细信息。
       
     
     
