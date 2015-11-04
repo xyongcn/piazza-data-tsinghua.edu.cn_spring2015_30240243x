@@ -38,8 +38,9 @@
   
   https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree/master/staticfiles
   
-四、自动从piazza获取有更新的数据，并同步到github仓库。
-     1. upd-data.py  实现以下三方面功能：
+#自动从piazza获取有更新的数据，并同步到github仓库。
+
+    1. upd-data.py  实现以下三方面功能：
      
        （1）.登录piazza平台
        （2）.从piazza获取返回数据（对数据解析可获得所有记录的更新时间），
