@@ -1,0 +1,1483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+  <head>
+    <meta name="apple-itunes-app" content="app-id=453142230" />
+    <link href="/css/splash/smart-app-banner.min.css" rel="stylesheet" />
+
+      
+
+  <!-- ===================================================================== -->
+  <!-- PAGE TITLE -->
+  <!-- ===================================================================== -->
+  <title>Piazza &#8226; Ask. Answer. Explore. Whenever.</title>
+
+
+  <!-- ===================================================================== -->
+  <!-- META TAGS -->
+  <!-- ===================================================================== -->
+
+  <!-- Forces page to render at the client device's width. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <!-- Specify character set -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EDGE"/>
+
+  <!-- Description for search results -->
+  <meta name="description" content="Piazza is a free online gathering place where students can ask, answer, and explore 24/7, under the guidance of their instructors. Students as well as instructors can answer questions, fueling a healthy, collaborative discussion." />
+  <meta name="keywords" content="classroom,homework,help,q&amp;a,question and answer,school,university" />
+
+  <!-- Description for Facebook -->
+  <meta property="og:title" content="Piazza &#8226; Ask. Answer. Explore. Whenever."/>
+  <meta property="og:image" content="http://piazza.com/images/splash/PageTop/Piazza-Icon.png"/>
+  <meta property="og:url"
+    
+      content="http://www.piazza.com"
+    
+  />
+  <meta property="og:description" content="With Piazza, easily answer questions, manage course materials, and track student participation. It'll save you time, and your students will love using it. It's free, and easy to get started."/>
+  
+
+  <!-- ===================================================================== -->
+  <!-- CSS -->
+  <!-- ===================================================================== -->
+
+  <!-- Third-Party -->
+  
+    <link rel="stylesheet" type="text/css" href="/css/shared/lib/bootstrap3/css/bootstrap.min.css?v=1246" />
+<!-- https://dvngeac8rg9mb.cloudfront.net -->
+  
+  <link rel="stylesheet" type="text/css" href="/css/plugins/fancybox-1.3.4.css?v=1246" />
+<!-- https://dvngeac8rg9mb.cloudfront.net -->
+
+
+  <!-- ===================================================================== -->
+  <!-- JQUERY -->
+  <!-- ===================================================================== -->
+
+  <!-- jQuery is the one JS file we do include at the top of the page, since so much HTML-nested code requires it. -->
+  <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/plugins/fancybox-1.3.4.css?v=1246" />
+<!-- https://dvngeac8rg9mb.cloudfront.net -->
+    <link rel="stylesheet" type="text/css" href="/css/splash/splash-responsive2.css?v=1246" />
+<!-- https://dvngeac8rg9mb.cloudfront.net -->
+
+    
+
+    
+
+    <script type="text/javascript" src="/javascripts/respond.min.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+    <script>(function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', '6024198745252', {'value':'0.00','currency':'USD'}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6024198745252&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+  </head>
+
+  <body class="new_splash ">
+    
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPTS -->
+  <!-- ===================================================================== -->
+
+  <!-- Third-Party -->
+  
+    <script type="text/javascript" src="/javascripts/bootstrap3.min.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+  
+  <script type="text/javascript" src="/javascripts/jquery.blockUI.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+
+  <script type="text/javascript" src="/javascripts/jquery.fancybox-1.3.4.pack.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+  <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-54Q84K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-54Q84K');</script>
+<!-- End Google Tag Manager -->
+
+
+  <!-- Piazza -->
+  <script type="text/javascript" src="/modules/event_manager.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+  <script type="text/javascript" src="/modules/helpers.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+  <script type="text/javascript" src="/modules/ajax.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+  <script type="text/javascript" src="/js/splash/splash.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+  
+
+    
+    <nav id="navbar" class="navbar navbar-fixed-top" role="navigation">
+  <div class="container topbar-container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <ul class="nav navbar-right-mobile navbar-nav navbar-right hidden-md hidden-lg hidden-sm visible-xs-block">
+        
+        <li><button data-log-click="topbar_signup_modal" type="button" class="log_click btn btn-default" href="#" data-toggle="modal" data-target="#signupModal">Sign Up</button></li>
+        <li><button type="button" data-log-click="topbar_login_modal" class="log_click btn btn-default login_button" href="#" data-toggle="modal" data-target="#loginModal">Login</button></li>
+      </ul>        
+
+      <a class="navbar-brand log_click"  data-log-click="topbar_logo" href="/signup"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav main_nav">
+        <li class=""><a  data-log-click="topbar_product" class="log_click" href="/product/overview">Product</a></li>
+        <li class="hidden-sm "><a  data-log-click="topbar_professors" class="log_click" href="/professors">In Professors' Words</a></li>
+        <li class="visible-sm-block hidden-xs hidden-lg hidden-md "><a  data-log-click="topbar_professors" class="log_click" href="/professors">Professors</a></li>
+        <li class=""><a  data-log-click="topbar_support" class="log_click" href="https://piazza.desk.com/" target="_blank">Support</a></li>
+        <li class=""><a  data-log-click="topbar_about" class="log_click" href="/about/story">About Us</a></li>
+        <li class="careers_link"><a  data-log-click="topbar_recruiting" class="log_click" href="https://recruiting.piazza.com">Piazza For Companies</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <button type="button"  data-log-click="topbar_signup" class="log_click btn btn-default" href="#" data-toggle="dropdown">Sign Up</button>
+
+          <ul class="dropdown-menu" role="menu">
+            <li><button  data-log-click="topbar_instructor_signup" class="log_click btn btn-primary btn-large btn-block" onClick="location.href='/instructors/school-search'">Instructors Get Started</button></li>
+            <li><button  data-log-click="topbar_student_signup" class="log_click btn-success btn btn-large btn-block" onClick="location.href='/school-search'">Students Get Started</button></li>
+          </ul>
+          
+        </li>
+        <li><button type="button"  data-log-click="topbar_login_modal" class="log_click btn btn-default login_button" href="#" data-toggle="modal" data-target="#loginModal">Login</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function submitenter(myfield,e) {
+    var keycode;
+    if (window.event) keycode = window.event.keyCode;
+    else if (e) keycode = e.which;
+    else return true;
+
+    if (keycode == 13) {
+      myfield.form.submit();
+      return false;
+    } else return true;
+  }
+  $('document').ready(function() {
+    $('#loginModal').on("shown.bs.modal", function() {
+      $('#email_field').focus();
+    });
+  });
+</script>
+
+<style type="text/css">
+  .form-group .prompt{
+      margin-left: 0%;
+  }
+
+  .form-group .controls .remember-the-titans{
+    margin-left: 6.5%;
+  }
+
+</style>
+<div class="login-modal modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="loginModalLabel">Log In</h4>
+      </div>
+      
+      
+      
+      
+      <script type="text/javascript">
+        $('document').ready(function() {
+          $('#loginModal').modal('show');
+          $('#password_field').focus();
+          $('#loginModal').on("hide.bs.modal", function() {
+            $("#loginModal .modal-error-summary").hide();
+          });
+        });
+      </script>
+      <div class="modal-error-summary" style="display:block;">
+        <span class="modal-error-message is-visible">Email or password incorrect</span>
+      </div>
+      
+      <div class="modal-body">
+        
+        <form role="form" class="form-horizontal" id="login-form" method="post" action="https://piazza.com/class">
+          <input type="hidden" name="from" value="/signup"/>
+          <div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label prompt" for="inputEmail">Email:</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="email_field" name="email" value="jennyzhang"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label prompt" for="inputPassword">Password:</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="password_field" name="password" onKeyPress="return submitenter(this,event)"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="controls">
+                <label class="col-sm-offset-3 col-sm-9 remember-me-label remember-the-titans">
+                  <input type="checkbox" id="remember" name="remember" checked="checked"/> Remember me
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="btn-toolbar">
+            <button class="btn btn-default pull-right">Log in</button>
+            <button class="btn btn-link" onclick="window.location.href='/account/password/forgot'; return false;">Forgot your password?</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="signup-modal modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="signupModalLabel">Sign up</h4>
+      </div>
+      <div class="modal-body">
+        <button  data-log-click="topbar_instructor_signup" class="log_click btn btn-primary btn-large btn-block" onClick="location.href='/instructors/school-search'">Instructors Get Started</button>
+        <button  data-log-click="topbar_student_signup" class="log_click btn-success btn btn-large btn-block" onClick="location.href='/school-search'">Students Get Started</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    $(document).scroll(function() {
+      if( $(this).scrollTop() >= 5 ) {
+        $("#navbar").addClass("navbar-shadow");
+      } else {
+        $("#navbar").removeClass("navbar-shadow");
+      }
+    });
+  });
+  
+</script>
+
+
+
+    
+<div class="container mobile-topbar hidden-lg hidden-md hidden-sm">
+  <div class="row">
+    <div class="col-xs-6 "><a href="/product/overview">Product</a></div>
+    <div class="col-xs-6 "><a href="/professors">Professors</a></div>
+    <div class="col-xs-6 "><a href="/support">Support</a></div>
+    <div class="col-xs-6 "><a href="/about/story">About Us</a></div>
+    <div class="col-xs-12 careers_link"><a href="https://recruiting.piazza.com">Piazza For Companies</a></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="main_header">The incredibly easy, completely free Q&amp;A platform</h1>
+      <h2 class="sub_header">Save time and help students learn using the power of community</h2>
+    </div>
+  </div>
+</div>
+
+<div class="splash_panel product_brief">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 hidden-xs hidden-sm">
+        <div class="preview product-demo" >
+          <div class="screen-overlay log_click" id="watch_video" data-toggle="modal" data-target="#product_video_modal" data-log-click="watch_video_product">
+            <div class="screen-overlay-glare"></div>
+            <div class="screen-overlay-play-pill">
+              <i></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 visible-xs visible-sm">
+        <iframe width="100%" height="auto" src="//www.youtube.com/embed/1Min8DscrzA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="features_list col-md-6">
+        <ul class="product_brief_list">
+          <li>Wiki style format enables collaboration in a single space</li>
+          <li>Features LaTeX editor, highlighted syntax and code blocking</li>
+          <li>Questions and posts needing immediate action are highlighted</li>
+          <li>Instructors endorse answers to keep the class on track</li>
+          <li>Anonymous posting encourages every student to participate</li>
+          <li>Highly customizable online polls</li>
+          <li>Integrates with every major LMS and is FERPA compliant</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row startup_buttons">
+      <div class="col-md-4 col-sm-4">
+        <button class="btn btn-block btn-success btn-lg log_click" data-log-click="student_signup" onClick="location.href='/school-search'">Students Get Started</button>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <button class="btn btn-block btn-primary btn-lg log_click" data-log-click="instructor_signup" onClick="location.href='/instructors/school-search'">Professors and TAs Get Started</button>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <a data-log-click="view_real_class" class="log_click btn btn-block btn-default btn-lg" target="_blank" href="/demo_login?nid=gw9jakygzvs616&auth=50e021f&close=fancy">View a Real Class</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<div class="modal fade" id="product_video_modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" onclick="$('#youtube_iframe').attr('src', '');"><i class="glyphicon glyphicon-remove"></i>&nbsp;CLOSE</button>
+        <iframe width="100%" height="600" src="" frameborder="0" id="youtube_iframe" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function() {
+    
+    $('#watch_video').click(function() {
+      //alert('hi sunnyp');
+      $('#youtube_iframe').attr('src', '//www.youtube.com/embed/1Min8DscrzA?rel=0&controls=1&showinfo=0&autoplay=1');
+      $('#product_video_modal').modal('show');
+
+      /*
+      var domain = "https://d26vy68u0k3u92.cloudfront.net/piazza-intro/piazza-intro-480."
+      // not all videos that are loaded using this code are actually in the same place, so we need to have some weird logic here
+      jwplayer('OverviewVideo').setup({
+        levels: [
+          { file: domain + 'mp4' },
+          { file: domain + 'ogv' },
+          { file: domain + 'webm' }
+        ],
+        'centerOnScroll': true,
+        'controlbar': 'over',
+        'bufferlength': '5',
+        'autostart': 'true',
+        'width': '640',
+        'height': '360',
+        'modes': [
+          {type: 'flash', src: "https://dvngeac8rg9mb.cloudfront.net/js/jwplayer/player.swf"},
+          {type: 'html5'},
+          {type: 'download'}
+        ]
+      });
+
+      $.fancybox({
+        'autoScale'		: false,
+        'title'			  : this.title,
+        'width'       : 640,
+        'height'      : 360,
+        'autoDimensions'  : true,
+        'href'			: "#OverviewVideo_wrapper",
+        'type'			: 'inline',
+        'onClosed'                : function() {
+          //var dur = (new Date()).getTime() - opened;
+          //dur = dur / 1000;
+          //var data = {'view_time': dur};
+          //PA.trackEvent(true, "video_closed/"+id, loc(), data);
+        }
+      });
+
+      //var video_name = id;
+      //if (video_name == "WatchVideoButton")
+      //  video_name = "WelcomeToPiazza";
+
+      //PA.trackEvent(true, "video_view/" + video_name, loc());
+      //opened = (new Date()).getTime();
+      //pageTracker._trackPageview("/video_view/" + name_video($(this)));
+      return false;
+      */
+    });
+
+});
+function expandSchools() {
+  $('#schools_expand_button').hide();
+  $('#expanded_schools_list').show();
+  return false;
+}
+function collapseSchools() {
+  $('#schools_expand_button').show();
+  $('#expanded_schools_list').hide();
+  return false;
+}
+</script>
+
+
+
+<div class="splash_panel alt_panel profs_panel log_visibility" data-log-visibility="professors">
+  <div class="container splash_ctr" id="professors">
+    <h2>Over 30,000 professors have chosen Piazza</h2>
+    <h3>Click on an instructor to see why</h3>
+    <div class="row">
+      <div class="prof_brief col-md-3 col-sm-6">
+  <a href="/professors#jennifer_schwartz" class="log_click thumbnail" data-log-click="prof_jennifer_schwartz">
+    <span class="img-rounded prof_icon jennifer_schwartz_icon"></span>
+
+    <div class="caption">
+      <div class="name">Jennifer Schwartz</div>
+      <div class="university">Stanford</div>
+      <div class="subject">Chemistry</div>
+      <div class="quote">&ldquo;Many of the students who ask questions on Piazza just wouldn't get the opportunity to ask them otherwise.&rdquo;</div>
+    </div>
+  </a>
+</div>
+<div class="prof_brief col-md-3 col-sm-6">
+  <a href="/professors#ron_lee" class="thumbnail log_click" data-log-click="prof_ron_lee">
+    <span class="img-rounded prof_icon ron_lee_icon"></span>
+
+    <div class="caption">
+      <div class="name">Ron Lee</div>
+      <div class="university">UC Berkeley</div>
+      <div class="subject">Economics</div>
+      <div class="quote">&ldquo;I think it impoverishes the learning environment if students don't talk to other students. Piazza makes it very easy to get a discussion going.&rdquo;</div>
+    </div>
+  </a>
+</div>
+<div class="prof_brief col-md-3 col-sm-6">
+  <a href="/professors#slobodan_simic" class="thumbnail log_click" data-log-click="prof_slobodan_simic">
+    <span class="img-rounded prof_icon slobodan_simic_icon"></span>
+
+    <div class="caption">
+      <div class="name">Slobodan Simic</div>
+      <div class="university">San Jose State</div>
+      <div class="subject">Mathematics</div>
+      <div class="quote">&ldquo;Nowadays, colleagues tell me that their students always ask, 'Are we going to use Piazza?' It's sort of an expected thing now.&rdquo;</div>
+    </div>
+  </a>
+</div>
+<div class="prof_brief col-md-3 col-sm-6">
+  <a href="/professors#paul_hegarty" class="thumbnail log_click" data-log-click="prof_paul_hegarty">
+    <span class="img-rounded prof_icon paul_hegarty_icon"></span>
+
+    <div class="caption">
+      <div class="name">Paul Hegarty</div>
+      <div class="university">Stanford</div>
+      <div class="subject">Computer Science</div>
+      <div class="quote">&ldquo;In the last few years, Piazza has replaced my entire website.&rdquo;</div>
+    </div>
+  </a>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="schools splash_panel log_visibility" data-log-visibility="schools" id="schools_splash_panel">
+  <a name="school_list"></a>
+  <div class="container splash_ctr" id="schools">
+    <h2>We're at 1,000 schools in 68 countries</h2>
+    <h3>Click a school to see classes and professor stories</h3>
+
+    <div class="row school_logos">
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/stanford/l3" class="log_click" data-log-click="school_stanford">
+
+            <span class="school_icon stanford_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/berkeley/l3" class="log_click" data-log-click="school_berkeley">
+
+            <span class="school_icon berkeley_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/mit/l3" class="log_click" data-log-click="school_mit">
+
+            <span class="school_icon mit_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/princeton/l3" class="log_click" data-log-click="school_princeton">
+
+            <span class="school_icon princeton_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/upenn/l3" class="log_click" data-log-click="school_upenn">
+
+            <span class="school_icon upenn_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/cmu/l3" class="log_click" data-log-click="school_cmu">
+
+            <span class="school_icon cmu_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/gatech/l3" class="log_click" data-log-click="school_gatech">
+
+            <span class="school_icon gatech_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/illinois/l3" class="log_click" data-log-click="school_illinois">
+
+            <span class="school_icon illinois_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/cornell/l3" class="log_click" data-log-click="school_cornell">
+
+            <span class="school_icon cornell_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/umich/l3" class="log_click" data-log-click="school_umich">
+
+            <span class="school_icon umich_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/uwaterloo.ca/l3" class="log_click" data-log-click="school_uwaterloo.ca">
+
+            <span class="school_icon uwaterloo_ca_icon" ></span>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+          <a target="_blank" href="/school/utexas/l3" class="log_click" data-log-click="school_utexas">
+
+            <span class="school_icon utexas_icon" ></span>
+          </a>
+        </div>
+
+    </div>
+
+    <div id="schools_expand_button" class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 expand_link">
+        <a onclick="return expandSchools();" class="log_click" data-log-click="show_more_schools" href="#">Find your school</a>
+      </div>
+    </div>
+
+    <div class="expanded_schools" id="expanded_schools">
+      <div id="expanded_schools_list" style="display:none;">
+
+        <div class="row hidden-xs hidden-sm">
+
+
+            <div class="col-md-4 text-center">
+
+                <div class="school_name"><a target="_blank" href="/school/asu/l3" class="log_click" data-log-click="school_asu">Arizona State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/bu/l3" class="log_click" data-log-click="school_bu">Boston University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/byu/l3" class="log_click" data-log-click="school_byu">Brigham Young Unviersity</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/brocku.ca/l3" class="log_click" data-log-click="school_brocku.ca">Brock University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/csulb/l3" class="log_click" data-log-click="school_csulb">CSU Long Beach</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/calpoly/l3" class="log_click" data-log-click="school_calpoly">Cal Poly</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/caltech/l3" class="log_click" data-log-click="school_caltech">Caltech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/carleton.ca/l3" class="log_click" data-log-click="school_carleton.ca">Carleton University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mines/l3" class="log_click" data-log-click="school_mines">Colorado School of Mines</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/colostate/l3" class="log_click" data-log-click="school_colostate">Colorado State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/columbia/l3" class="log_click" data-log-click="school_columbia">Columbia University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/depaul/l3" class="log_click" data-log-click="school_depaul">DePaul University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/duke/l3" class="log_click" data-log-click="school_duke">Duke University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/fiu/l3" class="log_click" data-log-click="school_fiu">Florida International University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gmu/l3" class="log_click" data-log-click="school_gmu">George Mason University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gatech/l3" class="log_click" data-log-click="school_gatech">Georgia Tech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gvsu/l3" class="log_click" data-log-click="school_gvsu">Grand Valley State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/iit/l3" class="log_click" data-log-click="school_iit">Illinois Institute of Technology</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/iastate/l3" class="log_click" data-log-click="school_iastate">Iowa State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/jmu/l3" class="log_click" data-log-click="school_jmu">James Madison University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/jhu/l3" class="log_click" data-log-click="school_jhu">Johns Hopkins University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/muohio/l3" class="log_click" data-log-click="school_muohio">Miami University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/msu/l3" class="log_click" data-log-click="school_msu">Michigan State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mtu/l3" class="log_click" data-log-click="school_mtu">Michigan Tech University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mst/l3" class="log_click" data-log-click="school_mst">Missouri S&T University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/nyu/l3" class="log_click" data-log-click="school_nyu">New York University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ncsu/l3" class="log_click" data-log-click="school_ncsu">North Carolina State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/northeastern/l3" class="log_click" data-log-click="school_northeastern">Northeastern University</a></div>
+
+            </div>
+
+            <div class="col-md-4 text-center">
+
+                <div class="school_name"><a target="_blank" href="/school/northwestern/l3" class="log_click" data-log-click="school_northwestern">Northwestern University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/oregonstate/l3" class="log_click" data-log-click="school_oregonstate">Oregon State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/psu/l3" class="log_click" data-log-click="school_psu">Penn State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/purdue/l3" class="log_click" data-log-click="school_purdue">Purdue University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rpi/l3" class="log_click" data-log-click="school_rpi">RPI</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rice/l3" class="log_click" data-log-click="school_rice">Rice University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rutgers/l3" class="log_click" data-log-click="school_rutgers">Rutgers University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/sjsu/l3" class="log_click" data-log-click="school_sjsu">San Jose State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/stonybrook/l3" class="log_click" data-log-click="school_stonybrook">Stony Brook University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/tamu/l3" class="log_click" data-log-click="school_tamu">Texas A&M Universtiy</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ttu/l3" class="log_click" data-log-click="school_ttu">Texas Tech University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/osu/l3" class="log_click" data-log-click="school_osu">The Ohio State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/tufts/l3" class="log_click" data-log-click="school_tufts">Tufts University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uic/l3" class="log_click" data-log-click="school_uic">U of I at Chicago</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umkc/l3" class="log_click" data-log-click="school_umkc">U of M - Kansas City</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucdavis/l3" class="log_click" data-log-click="school_ucdavis">UC Davis</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uci/l3" class="log_click" data-log-click="school_uci">UC Irvine</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucmerced/l3" class="log_click" data-log-click="school_ucmerced">UC Merced</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucr/l3" class="log_click" data-log-click="school_ucr">UC Riverside</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsd/l3" class="log_click" data-log-click="school_ucsd">UC San Diego</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsb/l3" class="log_click" data-log-click="school_ucsb">UC Santa Barbara</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsc/l3" class="log_click" data-log-click="school_ucsc">UC Santa Cruz</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucla/l3" class="log_click" data-log-click="school_ucla">UCLA</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ua/l3" class="log_click" data-log-click="school_ua">University of Alabama</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/arizona/l3" class="log_click" data-log-click="school_arizona">University of Arizona</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ubc.ca/l3" class="log_click" data-log-click="school_ubc.ca">University of British Columbia</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/buffalo/l3" class="log_click" data-log-click="school_buffalo">University of Buffalo</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucalgary.ca/l3" class="log_click" data-log-click="school_ucalgary.ca">University of Calgary</a></div>
+
+                
+
+            </div>
+
+            <div class="col-md-4 text-center">
+              
+                <div class="school_name"><a target="_blank" href="/school/ucf/l3" class="log_click" data-log-click="school_ucf">University of Central Florida</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uchicago/l3" class="log_click" data-log-click="school_uchicago">University of Chicago</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/cincinnati/l3" class="log_click" data-log-click="school_cincinnati">University of Cincinnati</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucdenver/l3" class="log_click" data-log-click="school_ucdenver">University of Col. Denver</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/colorado/l3" class="log_click" data-log-click="school_colorado">University of Colorado</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uconn/l3" class="log_click" data-log-click="school_uconn">University of Connecticut</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/udel/l3" class="log_click" data-log-click="school_udel">University of Delaware</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ufl/l3" class="log_click" data-log-click="school_ufl">University of Florida</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uky/l3" class="log_click" data-log-click="school_uky">University of Kentucky</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umd/l3" class="log_click" data-log-click="school_umd">University of Maryland</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umass/l3" class="log_click" data-log-click="school_umass">University of Massachusetts</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umn/l3" class="log_click" data-log-click="school_umn">University of Minnesota</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/unh/l3" class="log_click" data-log-click="school_unh">University of New Hampshire</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/unc/l3" class="log_click" data-log-click="school_unc">University of North Carolina</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/nd/l3" class="log_click" data-log-click="school_nd">University of Notre Dame</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uoregon/l3" class="log_click" data-log-click="school_uoregon">University of Oregon</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rochester/l3" class="log_click" data-log-click="school_rochester">University of Rochester</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/usc/l3" class="log_click" data-log-click="school_usc">University of Southern California</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utdallas/l3" class="log_click" data-log-click="school_utdallas">University of TX at Dallas</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utk/l3" class="log_click" data-log-click="school_utk">University of Tennessee</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utoronto.ca/l3" class="log_click" data-log-click="school_utoronto.ca">University of Toronto</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/virginia/l3" class="log_click" data-log-click="school_virginia">University of Virginia</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/washington/l3" class="log_click" data-log-click="school_washington">University of Washington</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wisc/l3" class="log_click" data-log-click="school_wisc">University of Wisconsin</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uml/l3" class="log_click" data-log-click="school_uml">Universtiy of Mass. - Lowell</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/vt/l3" class="log_click" data-log-click="school_vt">Virginia Tech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wsu/l3" class="log_click" data-log-click="school_wsu">Washington State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wustl/l3" class="log_click" data-log-click="school_wustl">Washington University in St. Louis</a></div>
+
+            </div>
+
+        </div>
+
+        <div class="row hidden-md hidden-lg hidden-xs">
+
+
+            <div class="col-sm-6 text-center">
+
+                <div class="school_name"><a target="_blank" href="/school/asu/l3" class="log_click" data-log-click="school_asu">Arizona State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/bu/l3" class="log_click" data-log-click="school_bu">Boston University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/byu/l3" class="log_click" data-log-click="school_byu">Brigham Young Unviersity</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/brocku.ca/l3" class="log_click" data-log-click="school_brocku.ca">Brock University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/csulb/l3" class="log_click" data-log-click="school_csulb">CSU Long Beach</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/calpoly/l3" class="log_click" data-log-click="school_calpoly">Cal Poly</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/caltech/l3" class="log_click" data-log-click="school_caltech">Caltech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/carleton.ca/l3" class="log_click" data-log-click="school_carleton.ca">Carleton University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/cmu/l3" class="log_click" data-log-click="school_cmu">Carnegie Mellon University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mines/l3" class="log_click" data-log-click="school_mines">Colorado School of Mines</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/colostate/l3" class="log_click" data-log-click="school_colostate">Colorado State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/columbia/l3" class="log_click" data-log-click="school_columbia">Columbia University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/depaul/l3" class="log_click" data-log-click="school_depaul">DePaul University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/duke/l3" class="log_click" data-log-click="school_duke">Duke University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/fiu/l3" class="log_click" data-log-click="school_fiu">Florida International University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gmu/l3" class="log_click" data-log-click="school_gmu">George Mason University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gatech/l3" class="log_click" data-log-click="school_gatech">Georgia Tech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gvsu/l3" class="log_click" data-log-click="school_gvsu">Grand Valley State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/iit/l3" class="log_click" data-log-click="school_iit">Illinois Institute of Technology</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/iastate/l3" class="log_click" data-log-click="school_iastate">Iowa State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/jmu/l3" class="log_click" data-log-click="school_jmu">James Madison University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/jhu/l3" class="log_click" data-log-click="school_jhu">Johns Hopkins University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/muohio/l3" class="log_click" data-log-click="school_muohio">Miami University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/msu/l3" class="log_click" data-log-click="school_msu">Michigan State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mtu/l3" class="log_click" data-log-click="school_mtu">Michigan Tech University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mst/l3" class="log_click" data-log-click="school_mst">Missouri S&T University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/nyu/l3" class="log_click" data-log-click="school_nyu">New York University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ncsu/l3" class="log_click" data-log-click="school_ncsu">North Carolina State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/northeastern/l3" class="log_click" data-log-click="school_northeastern">Northeastern University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/northwestern/l3" class="log_click" data-log-click="school_northwestern">Northwestern University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/oregonstate/l3" class="log_click" data-log-click="school_oregonstate">Oregon State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/psu/l3" class="log_click" data-log-click="school_psu">Penn State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/purdue/l3" class="log_click" data-log-click="school_purdue">Purdue University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rpi/l3" class="log_click" data-log-click="school_rpi">RPI</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rice/l3" class="log_click" data-log-click="school_rice">Rice University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rutgers/l3" class="log_click" data-log-click="school_rutgers">Rutgers University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/sjsu/l3" class="log_click" data-log-click="school_sjsu">San Jose State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/stonybrook/l3" class="log_click" data-log-click="school_stonybrook">Stony Brook University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/tamu/l3" class="log_click" data-log-click="school_tamu">Texas A&M Universtiy</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ttu/l3" class="log_click" data-log-click="school_ttu">Texas Tech University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/osu/l3" class="log_click" data-log-click="school_osu">The Ohio State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/tufts/l3" class="log_click" data-log-click="school_tufts">Tufts University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uic/l3" class="log_click" data-log-click="school_uic">U of I at Chicago</a></div>
+
+            </div>
+
+            <div class="col-sm-6 text-center">
+
+                <div class="school_name"><a target="_blank" href="/school/umkc/l3" class="log_click" data-log-click="school_umkc">U of M - Kansas City</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucdavis/l3" class="log_click" data-log-click="school_ucdavis">UC Davis</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uci/l3" class="log_click" data-log-click="school_uci">UC Irvine</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucmerced/l3" class="log_click" data-log-click="school_ucmerced">UC Merced</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucr/l3" class="log_click" data-log-click="school_ucr">UC Riverside</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsd/l3" class="log_click" data-log-click="school_ucsd">UC San Diego</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsb/l3" class="log_click" data-log-click="school_ucsb">UC Santa Barbara</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsc/l3" class="log_click" data-log-click="school_ucsc">UC Santa Cruz</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucla/l3" class="log_click" data-log-click="school_ucla">UCLA</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ua/l3" class="log_click" data-log-click="school_ua">University of Alabama</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/arizona/l3" class="log_click" data-log-click="school_arizona">University of Arizona</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ubc.ca/l3" class="log_click" data-log-click="school_ubc.ca">University of British Columbia</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/buffalo/l3" class="log_click" data-log-click="school_buffalo">University of Buffalo</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucalgary.ca/l3" class="log_click" data-log-click="school_ucalgary.ca">University of Calgary</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucf/l3" class="log_click" data-log-click="school_ucf">University of Central Florida</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uchicago/l3" class="log_click" data-log-click="school_uchicago">University of Chicago</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/cincinnati/l3" class="log_click" data-log-click="school_cincinnati">University of Cincinnati</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucdenver/l3" class="log_click" data-log-click="school_ucdenver">University of Col. Denver</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/colorado/l3" class="log_click" data-log-click="school_colorado">University of Colorado</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uconn/l3" class="log_click" data-log-click="school_uconn">University of Connecticut</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/udel/l3" class="log_click" data-log-click="school_udel">University of Delaware</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ufl/l3" class="log_click" data-log-click="school_ufl">University of Florida</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uky/l3" class="log_click" data-log-click="school_uky">University of Kentucky</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umd/l3" class="log_click" data-log-click="school_umd">University of Maryland</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umass/l3" class="log_click" data-log-click="school_umass">University of Massachusetts</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umn/l3" class="log_click" data-log-click="school_umn">University of Minnesota</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/unh/l3" class="log_click" data-log-click="school_unh">University of New Hampshire</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/unc/l3" class="log_click" data-log-click="school_unc">University of North Carolina</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/nd/l3" class="log_click" data-log-click="school_nd">University of Notre Dame</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uoregon/l3" class="log_click" data-log-click="school_uoregon">University of Oregon</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rochester/l3" class="log_click" data-log-click="school_rochester">University of Rochester</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/usc/l3" class="log_click" data-log-click="school_usc">University of Southern California</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utdallas/l3" class="log_click" data-log-click="school_utdallas">University of TX at Dallas</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utk/l3" class="log_click" data-log-click="school_utk">University of Tennessee</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utoronto.ca/l3" class="log_click" data-log-click="school_utoronto.ca">University of Toronto</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/virginia/l3" class="log_click" data-log-click="school_virginia">University of Virginia</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/washington/l3" class="log_click" data-log-click="school_washington">University of Washington</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wisc/l3" class="log_click" data-log-click="school_wisc">University of Wisconsin</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uml/l3" class="log_click" data-log-click="school_uml">Universtiy of Mass. - Lowell</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/vt/l3" class="log_click" data-log-click="school_vt">Virginia Tech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wsu/l3" class="log_click" data-log-click="school_wsu">Washington State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wustl/l3" class="log_click" data-log-click="school_wustl">Washington University in St. Louis</a></div>
+
+            </div>
+
+        </div>
+
+        <div class="row hidden-md hidden-lg hidden-sm">
+
+
+            <div class="col-xs-12 text-center">
+
+                <div class="school_name"><a target="_blank" href="/school/asu/l3" class="log_click" data-log-click="school_asu">Arizona State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/bu/l3" class="log_click" data-log-click="school_bu">Boston University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/byu/l3" class="log_click" data-log-click="school_byu">Brigham Young Unviersity</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/brocku.ca/l3" class="log_click" data-log-click="school_brocku.ca">Brock University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/csulb/l3" class="log_click" data-log-click="school_csulb">CSU Long Beach</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/calpoly/l3" class="log_click" data-log-click="school_calpoly">Cal Poly</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/caltech/l3" class="log_click" data-log-click="school_caltech">Caltech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/carleton.ca/l3" class="log_click" data-log-click="school_carleton.ca">Carleton University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/cmu/l3" class="log_click" data-log-click="school_cmu">Carnegie Mellon University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mines/l3" class="log_click" data-log-click="school_mines">Colorado School of Mines</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/colostate/l3" class="log_click" data-log-click="school_colostate">Colorado State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/columbia/l3" class="log_click" data-log-click="school_columbia">Columbia University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/depaul/l3" class="log_click" data-log-click="school_depaul">DePaul University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/duke/l3" class="log_click" data-log-click="school_duke">Duke University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/fiu/l3" class="log_click" data-log-click="school_fiu">Florida International University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gmu/l3" class="log_click" data-log-click="school_gmu">George Mason University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gatech/l3" class="log_click" data-log-click="school_gatech">Georgia Tech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/gvsu/l3" class="log_click" data-log-click="school_gvsu">Grand Valley State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/iit/l3" class="log_click" data-log-click="school_iit">Illinois Institute of Technology</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/iastate/l3" class="log_click" data-log-click="school_iastate">Iowa State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/jmu/l3" class="log_click" data-log-click="school_jmu">James Madison University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/jhu/l3" class="log_click" data-log-click="school_jhu">Johns Hopkins University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/muohio/l3" class="log_click" data-log-click="school_muohio">Miami University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/msu/l3" class="log_click" data-log-click="school_msu">Michigan State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mtu/l3" class="log_click" data-log-click="school_mtu">Michigan Tech University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/mst/l3" class="log_click" data-log-click="school_mst">Missouri S&T University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/nyu/l3" class="log_click" data-log-click="school_nyu">New York University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ncsu/l3" class="log_click" data-log-click="school_ncsu">North Carolina State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/northeastern/l3" class="log_click" data-log-click="school_northeastern">Northeastern University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/northwestern/l3" class="log_click" data-log-click="school_northwestern">Northwestern University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/oregonstate/l3" class="log_click" data-log-click="school_oregonstate">Oregon State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/psu/l3" class="log_click" data-log-click="school_psu">Penn State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/purdue/l3" class="log_click" data-log-click="school_purdue">Purdue University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rpi/l3" class="log_click" data-log-click="school_rpi">RPI</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rice/l3" class="log_click" data-log-click="school_rice">Rice University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rutgers/l3" class="log_click" data-log-click="school_rutgers">Rutgers University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/sjsu/l3" class="log_click" data-log-click="school_sjsu">San Jose State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/stonybrook/l3" class="log_click" data-log-click="school_stonybrook">Stony Brook University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/tamu/l3" class="log_click" data-log-click="school_tamu">Texas A&M Universtiy</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ttu/l3" class="log_click" data-log-click="school_ttu">Texas Tech University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/osu/l3" class="log_click" data-log-click="school_osu">The Ohio State University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/tufts/l3" class="log_click" data-log-click="school_tufts">Tufts University</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uic/l3" class="log_click" data-log-click="school_uic">U of I at Chicago</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umkc/l3" class="log_click" data-log-click="school_umkc">U of M - Kansas City</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucdavis/l3" class="log_click" data-log-click="school_ucdavis">UC Davis</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uci/l3" class="log_click" data-log-click="school_uci">UC Irvine</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucmerced/l3" class="log_click" data-log-click="school_ucmerced">UC Merced</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucr/l3" class="log_click" data-log-click="school_ucr">UC Riverside</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsd/l3" class="log_click" data-log-click="school_ucsd">UC San Diego</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsb/l3" class="log_click" data-log-click="school_ucsb">UC Santa Barbara</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucsc/l3" class="log_click" data-log-click="school_ucsc">UC Santa Cruz</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucla/l3" class="log_click" data-log-click="school_ucla">UCLA</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ua/l3" class="log_click" data-log-click="school_ua">University of Alabama</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/arizona/l3" class="log_click" data-log-click="school_arizona">University of Arizona</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ubc.ca/l3" class="log_click" data-log-click="school_ubc.ca">University of British Columbia</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/buffalo/l3" class="log_click" data-log-click="school_buffalo">University of Buffalo</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucalgary.ca/l3" class="log_click" data-log-click="school_ucalgary.ca">University of Calgary</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucf/l3" class="log_click" data-log-click="school_ucf">University of Central Florida</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uchicago/l3" class="log_click" data-log-click="school_uchicago">University of Chicago</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/cincinnati/l3" class="log_click" data-log-click="school_cincinnati">University of Cincinnati</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ucdenver/l3" class="log_click" data-log-click="school_ucdenver">University of Col. Denver</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/colorado/l3" class="log_click" data-log-click="school_colorado">University of Colorado</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uconn/l3" class="log_click" data-log-click="school_uconn">University of Connecticut</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/udel/l3" class="log_click" data-log-click="school_udel">University of Delaware</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/ufl/l3" class="log_click" data-log-click="school_ufl">University of Florida</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uky/l3" class="log_click" data-log-click="school_uky">University of Kentucky</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umd/l3" class="log_click" data-log-click="school_umd">University of Maryland</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umass/l3" class="log_click" data-log-click="school_umass">University of Massachusetts</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/umn/l3" class="log_click" data-log-click="school_umn">University of Minnesota</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/unh/l3" class="log_click" data-log-click="school_unh">University of New Hampshire</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/unc/l3" class="log_click" data-log-click="school_unc">University of North Carolina</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/nd/l3" class="log_click" data-log-click="school_nd">University of Notre Dame</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uoregon/l3" class="log_click" data-log-click="school_uoregon">University of Oregon</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/rochester/l3" class="log_click" data-log-click="school_rochester">University of Rochester</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/usc/l3" class="log_click" data-log-click="school_usc">University of Southern California</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utdallas/l3" class="log_click" data-log-click="school_utdallas">University of TX at Dallas</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utk/l3" class="log_click" data-log-click="school_utk">University of Tennessee</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/utoronto.ca/l3" class="log_click" data-log-click="school_utoronto.ca">University of Toronto</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/virginia/l3" class="log_click" data-log-click="school_virginia">University of Virginia</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/washington/l3" class="log_click" data-log-click="school_washington">University of Washington</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wisc/l3" class="log_click" data-log-click="school_wisc">University of Wisconsin</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/uml/l3" class="log_click" data-log-click="school_uml">Universtiy of Mass. - Lowell</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/vt/l3" class="log_click" data-log-click="school_vt">Virginia Tech</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wsu/l3" class="log_click" data-log-click="school_wsu">Washington State</a></div>
+
+                <div class="school_name"><a target="_blank" href="/school/wustl/l3" class="log_click" data-log-click="school_wustl">Washington University in St. Louis</a></div>
+
+            </div>
+
+        </div>
+
+        <div class="row show_less_link">
+          <div class="col-md-12 col-sm-12 col-xs-12 expand_link contract_link">
+            <a id="collapseSchoolsList" class="log_click" data-log-click="show_less_schools" href="#" onclick="return collapseSchools();">Show fewer schools</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+  $("#collapseSchoolsList").click(function() {
+    $('#schools_expand_button').show();
+    $("#expanded_schools_list").removeClass("in");
+    $('html, body').animate({
+      scrollTop: $(".schools.splash_panel").offset().top - $("#navbar").height()
+    }, 500);
+    return false;
+  });
+  
+
+  if (typeof(SHOW_SCHOOLS) != "undefined" && SHOW_SCHOOLS) {
+    $('#schools_expand_button').hide();
+    $("#expanded_schools_list").addClass("in");
+    $("body").scrollTop($("#schools_splash_panel").offset().top - 50);
+    SHOW_SCHOOLS = false;
+  }
+  });
+</script>
+
+
+
+<div class="subjects splash_panel alt_panel log_visibility" data-log-visibility="subjects">
+  <div class="container splash_ctr" id="subjects">
+    <h2>Learn how Piazza works for your subject</h2>
+    <h3>Click subject to view</h3>
+
+    <div class="row">
+
+        <div class="col-md-3 col-sm-6 computer_science">
+          <a target="_blank" type="button" data-log-click="subject_computer_science" class="log_click btn btn-default btn-lg btn-block subject_button" href="/subjects/computer_science">
+            <span class="subject_icon computer_science_icon"></span>
+            <span class="subject_name">Computer Science</span>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 engineering">
+          <a target="_blank" type="button" data-log-click="subject_engineering" class="log_click btn btn-default btn-lg btn-block subject_button" href="/subjects/engineering">
+            <span class="subject_icon engineering_icon"></span>
+            <span class="subject_name">Engineering</span>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 math">
+          <a target="_blank" type="button" data-log-click="subject_mathematics" class="log_click btn btn-default btn-lg btn-block subject_button" href="/subjects/math">
+            <span class="subject_icon math_icon"></span>
+            <span class="subject_name">Mathematics</span>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 physics">
+          <a target="_blank" type="button" data-log-click="subject_physics" class="log_click btn btn-default btn-lg btn-block subject_button" href="/subjects/physics">
+            <span class="subject_icon physics_icon"></span>
+            <span class="subject_name">Physics</span>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 economics">
+          <a target="_blank" type="button" data-log-click="subject_economics" class="log_click btn btn-default btn-lg btn-block subject_button" href="/subjects/economics">
+            <span class="subject_icon economics_icon"></span>
+            <span class="subject_name">Economics</span>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 chemistry">
+          <a target="_blank" type="button" data-log-click="subject_chemistry" class="log_click btn btn-default btn-lg btn-block subject_button" href="/subjects/chemistry">
+            <span class="subject_icon chemistry_icon"></span>
+            <span class="subject_name">Chemistry</span>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 psychology">
+          <a target="_blank" type="button" data-log-click="subject_psychology" class="log_click btn btn-default btn-lg btn-block subject_button" href="/subjects/psychology">
+            <span class="subject_icon psychology_icon"></span>
+            <span class="subject_name">Psychology</span>
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 biology">
+          <a target="_blank" type="button" data-log-click="subject_biology" class="log_click btn btn-default btn-lg btn-block subject_button" href="/subjects/biology">
+            <span class="subject_icon biology_icon"></span>
+            <span class="subject_name">Biology</span>
+          </a>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="our_story splash_panel log_visibility" data-log-visibility="our_story">
+  <div class="container splash_ctr" id="our_story">
+    <h2>Our story</h2>
+    <div class="row">
+      
+      <div class="col-md-6 hidden-xs hidden-sm">
+        <!-- Fancybox Content -->
+        <div class="hidden" style="position: absolute; display: none;">
+          <div id="OverviewVideo"></div>
+        </div>
+        <div class="preview our-story-video log_click" data-log-click="watch_video_founder" rel="fancybox-amazon" rev="intro-guru" id="WatchVideoFounder">
+          <div class="screen-overlay">
+            <!--
+                <div class="screen-overlay-glare"></div>
+                -->
+            <div class="screen-overlay-play-pill">
+              <i></i>
+            </div>
+          </div>
+        </div>
+        <script>
+$(document).ready(function() {
+  $('div[rel=fancybox-amazon]').click(function() {
+    var id = $(this).attr("id");
+    var vid = $(this).attr("rev");
+    jwplayer('OverviewVideo').setup({
+      levels: [
+        { file: 'https://d26vy68u0k3u92.cloudfront.net/homepage/piazza-'+vid+'-480.mp4' },
+        { file: 'https://d26vy68u0k3u92.cloudfront.net/homepage/piazza-'+vid+'-480.ogv' },
+        { file: 'https://d26vy68u0k3u92.cloudfront.net/homepage/piazza-'+vid+'-480.webm' }
+      ],
+      'centerOnScroll': true,
+      'controlbar': 'over',
+      'bufferlength': '5',
+      'autostart': 'true',
+      'width': '640',
+      'height': '360',
+      'modes': [
+        {type: 'flash', src: "https://dvngeac8rg9mb.cloudfront.net/js/jwplayer/player.swf"},
+        {type: 'html5'},
+        {type: 'download'}
+      ]
+    });
+
+    $.fancybox({
+      'autoScale'		: false,
+      'title'			: this.title,
+      'width'			: 640,
+      'height'		    : 360,
+      'autoDimensions'  : false,
+      'href'			: "#OverviewVideo",
+      'type'			: 'inline',
+      'onClosed'                : function() {
+        //$('#OverviewVideo').html('');
+        //var dur = (new Date()).getTime() - opened;
+        //dur = dur / 1000;
+        //var data = {'view_time': dur};
+        //PA.trackEvent(true, "video_closed/"+id, loc(), data);
+      }
+    });
+
+    //var video_name = id;
+    //if (video_name == "WatchVideoButton")
+    //  video_name = "WelcomeToPiazza";
+
+    //pageTracker._trackPageview("video_view/" + video_name);
+    //_gaq.push(['_trackPageview', 'video_view/' + video_name]); //new GA tracking
+
+
+    //PA.trackEvent(true, "video_view/" + video_name, loc());
+    //opened = (new Date()).getTime();
+    //pageTracker._trackPageview("/video_view/" + name_video($(this)));
+  });
+});
+        </script>
+      </div>
+      <div class="col-md-6">
+      
+        <p>Piazza is designed to connect students, TAs, and professors so every student can get the help they need when they need it. </p>
+
+        <p>Today, hundreds of thousands of students across hundreds of campuses are using Piazza for their classes. It warms me to think I started something that is impacting the way students learn and the way instructors teach.</p>
+
+        <p>I sincerely hope Piazza enhances your experience as a student, as a TA, and as a professor.</p>
+        <span class="pull-right muted">
+          &mdash; Pooja Nath Sankar, Piazza Founder &amp; CEO
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  var params = {
+    type: "hp_window_size",
+    int1: $(window).width(),
+    int2: $(window).height()
+  }
+  PA.call_pj("generic.page_event", params, 1, function(){});
+});
+</script>
+
+
+    <div class="footer">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- Internal Links -->
+      <div class="col-md-10 col-sm-10">
+        <div class="row">
+          <div class="col-md-2 col-sm-3 col-xs-6 footer_col about_panel">
+            <h6 class="title">About</h6>
+            <ul>
+              <li><a class="log_click" data-log-click="footer_about_story" href="/about/story">Our Story</a></li>
+              <li><a class="log_click" data-log-click="footer_about_blog" href="http://blog.piazza.com/" target="_blank">Blog</a></li>
+              <li><a class="log_click" data-log-click="footer_about_investors" href="/about/investors">Investors</a></li>
+              <li><a class="log_click" data-log-click="footer_about_news" href="/about/news">News</a></li>
+              <li><a class="log_click" data-log-click="footer_about_jobs" href="/about/jobs">Jobs</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-3 col-xs-6 footer_col">
+            <h6 class="title">Product</h6>
+            <ul>
+              <li><a class="log_click" data-log-click="footer_product_overview" href="/product/overview">Why Piazza Works</a></li>
+              <li><a class="log_click" data-log-click="footer_product_lti" href="/product/lti">LMS Integration</a></li>
+              <li><a class="log_click" data-log-click="footer_product_accessibility" href="/product/accessibility">Accessibility</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-3 col-xs-6 footer_col support_panel">
+            <h6 class="title">Support</h6>
+            <ul>
+              <li><a class="log_click" data-log-click="footer_support" href="https://piazza.desk.com/" target="_blank">Help</a></li>
+              <li><a class="log_click" data-log-click="footer_contact_us" href="/support/contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-3 col-xs-6 footer_col">
+            <h6 class="title">Legal</h6>
+            <ul>
+              <li><a class="log_click" data-log-click="footer_legal_privacy" href="/legal/privacy">Privacy Policy</a></li>
+              <li><a class="log_click" data-log-click="footer_legal_copyright" href="/legal/copyright">Copyright Policy</a></li>
+              <li><a class="log_click" data-log-click="footer_legal_terms" href="/legal/terms">Terms of Service</a></li>
+              <li><a class="log_click" data-log-click="footer_legal_ferpa" href="/legal/ferpa">FERPA Compliance</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social & Legal -->
+      <div class="col-md-2 col-sm-2">
+        <ul class="social clearfix">
+          <li>
+            <a data-log-click="footer_twitter" class="log_click twitter-link" href="http://twitter.com/piazza" target="_blank" onClick="PA.trackEvent(true, 'twitter_button', '/signup');"></a>
+          </li>
+          <li>
+            <a data-log-click="footer_facebook" class="log_click facebook-link" href="http://www.facebook.com/piazzza" target="_blank" onClick="PA.trackEvent(true, 'facebook_button', '/signup');"></a>
+          </li>
+        </ul>
+        <div class="legal">
+          <div id="CopyrightInfo">
+            Copyright &#169; 2014<br/>Piazza Technologies<br/>All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="align-center">
+      Our terms changed on July 14, 2013. Please review the new <a href="/legal/terms">Piazza Terms of Service</a>.
+    </div>
+
+  </div>
+</div>
+
+
+    
+      <script type="text/javascript" src="/js/jwplayer/jwplayer.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+
+    
+    <script type="text/javascript" src="/javascripts/jquery.fancybox-1.3.4.pack.js?v=1246"></script>
+<!--https://dvngeac8rg9mb.cloudfront.net-->
+
+    
+
+    
+
+    <script type="text/javascript">
+var wasVisible = {};
+var scrollOffsets = {};
+var loggingPageName = "homepage";
+
+$(document).ready(function() {
+
+  $('.log_click').click(function(){
+    var id = $(this).data("logClick");
+    if (id) {
+      id = loggingPageName + "." + id;
+      PA.call_pj("generic.page_event", {type:id}, 1, function(){});
+    }
+  });
+
+  $('.log_visibility').each(function(){
+    var id = $(this).data("logVisibility");
+    if (id) {
+      scrollOffsets[id] = $(this).offset().top;
+    }
+  });
+});
+
+var recordVisisbleSections;
+$(window).scroll(function() {
+  var top = $('body').scrollTop();
+  if ($('html').scrollTop() > top)
+    top = $('html').scrollTop();
+  for (var id in scrollOffsets) {
+    if (top + 200 > scrollOffsets[id]) {
+      if (!wasVisible[id]) {
+        PA.call_pj("generic.page_event", {type:(loggingPageName + ".scroll"), text1:id}, 1);
+      }
+      wasVisible[id] = 1;
+    }
+  }
+});
+    </script>
+
+
+
+  </body>
+
+</html>
