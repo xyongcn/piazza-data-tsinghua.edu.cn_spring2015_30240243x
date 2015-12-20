@@ -1,0 +1,141 @@
+/* CSS for GradeXBlock */
+.grade_block{
+overflow:auto;
+width:100%;
+height:100%;
+}
+.grade_block .count {
+    font-weight: bold;
+}
+
+.grade_block p {
+    cursor: pointer;
+}
+body {
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #484a4c;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    min-height: 400px;
+    min-width:600px;
+    height: 100%;
+}
+
+a {
+    color: #3c7cc0;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+p{
+    margin-left: 5px;
+}
+.start_title{
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    color: white;
+    height: 45px;
+    z-index: 1005;
+    min-height: 0px;
+    border-radius: 0;
+    border: none;
+    background: #669999;
+    font-size:25px;
+    font-weight:bold;
+    text-align:center
+}
+#gradePage{
+background:#669999;
+}
+#page_main {
+    top: 45px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 1005;
+    min-height: 0px;
+    border-radius: 0;
+    border: none;
+    width:100%;
+    height:100%;
+    background:#669999;
+
+}
+#view{
+    margin-top:0px;
+    background:#669999;
+}
+
+.region_box{
+    background: whitesmoke;
+    -moz-box-shadow: 0 0 3px #676869;
+    /* FF3.5+ */
+    -khtml-box-shadow: 0 0 3px #676869;
+    /* Konqueror */
+    -webkit-box-shadow: 0 0 3px #676869;
+    /* Safari 3.0+, Chrome */
+    box-shadow: 0 0 3px #676869;
+    /* Opera 10.5, IE9, Chrome 10+ */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    position: relative;
+    margin-left:100px;
+    margin-right: 100px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+.region_box_inner{
+    background: white;
+    -moz-box-shadow: 0 0 3px #676869;
+    /* FF3.5+ */
+    -khtml-box-shadow: 0 0 3px #676869;
+    /* Konqueror */
+    -webkit-box-shadow: 0 0 3px #676869;
+    /* Safari 3.0+, Chrome */
+    box-shadow: 0 0 3px #676869;
+    /* Opera 10.5, IE9, Chrome 10+ */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    position: relative;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.region_box .post_title{
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    color: #555;
+    float: left;
+    margin-left: 5px;
+    line-height: 1.5;
+
+
+}
+.region_box .post_content{
+    padding: 12px;
+    overflow: hidden;
+    margin: 5px 0;
+    color: #333;
+
+
+
+}
