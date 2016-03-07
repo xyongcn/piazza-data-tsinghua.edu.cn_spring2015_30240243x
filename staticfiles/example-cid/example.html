@@ -1,34 +1,23 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="handlebars-v3.0.3.js"></script>
-<script type="text/javascript" src="piazza_feed.js"></script>
-    <link type="text/css" href="dashboard_feed.css" rel="stylesheet">
- <title>Piazza-show-feed</title>
+<script type="text/javascript" src="piazza_cid.js "></script>
+    <link type="text/css" href="dashboard_cid.css" rel="stylesheet">
+
 </head>
 <body>
+please input cid:<input type = "text" value = "333" id = "cid"/></input>
+<input type="button" value = "read" id='btn_read'/></input>
 
-
-<div class="navbar top_bar" id="top_bar" align="left ">
-
-
-
-</div>
-
-
-	<div id="page_main" class="has_popular_tags_bar">
-        <div class="bars" id="bars">
-            <div id="popular_tags_bar" class="dashboard_toolbar">
-            
-            </div>
-        </div>
+	<div id="page_main" >
         <div class ="views" id="views">
+            <div id ="page_center" style=" left: 0px; bottom: 0px;">
 
+            </div>
             <div id ="feed" class="page_feed">
-
-
 
             </div>
 
@@ -36,107 +25,125 @@
 
 	</div>
 
-
-        <!-- popular_tags_list的js模板 动态显示标签-->
-	<script id="popular-tags-bar-template" type="text/x-handlebars-template">
-            
-             
-            <span class="folder_icon"></span>
-            <ul id="popular_tags_list" class="clearFix">
-
-                <!-- popular标签列表-->
-                 {{#with result.tags.popular}}
-                    
-                    {{#each this}}
-
-                          <li ><a class="tag folder" id="{{this}}" onclick="click_tags(id)">{{this}}</a></li>
-                    {{/each}}
-                           
-                 {{/with}}
-                           
-               
-            </ul>  
-        </script>
-
-    <!--feed部分的js模板 显示某一个讨论记录的索引列表-->
-    <script id="feed-template" type="text/x-handlebars-template">
-
-
+    <script id="page-center-template" type="text/x-handlebars-template">
+        {{!-- 通知的内容 --}}
         {{#with result}}
+        <div id="23orij23" class="post_region_box question_note_view dashboard_element">
 
-        <div id="question_feed_questions" class="scrollable" style="top: 0">
-            {{!-- 按组显示（遍历所有组） --}}
-            {{#each feed}}
+            <div class="post_region_content note" id="view_question_note" >
+                {{#each history}}
+                <h1 class="post_region_title"> {{{subject}}}</h1>
+                <div class="post_region_text" id="questionText" >{{{content}}}</div>
+                {{/each}}
+            </div>
+        </div>
+        {{#each children}}
 
+        {{!-- followup discussion --}}
+        {{#compare type 'followup'}}
 
+        <div id="clarifying_discussion" class="post_region_box clarifying_discussion dashboard_element">
+            <div class="post_region_header clearFix">
+                <div class="post_title">followup discussions</div>
+                <div class="post_subtitle">for lingering questions and comments</div>
 
-            <div class="question_group">
-                <div class="start_open page_feed_bucket_header">
-                    <span>▾{{{bucket_name}}}</span>
+            </div>
+            {{!-- 列出所有讨论（遍历） --}}
+
+            <div class="post_region_content clarifying_discussion">
+                {{!-- 对每一个讨论内容 --}}
+
+                <div class="clarifying_discussion clearFix" id="{{children.id}}">
+                    <div class="discussion_content main_followup clearFix">
+                        <div class="discussion_text">
+                            <span class="actual_text post_region_text">
+                                {{{subject}}}
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+                {{#each children}}
+
+                {{!-- 对每一个讨论的回复(遍历) --}}
+                <div class="all_replies">
+                    <div class="discussion_replies existing_reply clearFix">
+                        <div class="discussion_text">
+                            <span class="actual_reply_text post_region_text">
+                                {{{subject}}}
+                            </span>
+                        </div>
+
+                    </div>
                 </div>
 
-                <ul id="bucket_pin-item-list" class="item-list-in-bucket">
-                    {{!-- 显示该组的所有项目（遍历该组） --}}
-                    <li class="feed_item clearfix note " id="{{id}}" onclick="">
-                        {{!--日期 --}}
-                        <div class="metadata">
-                            <div class="timestamp">{{{modified}}}</div>
-                        </div>
-                        {{!--内容 --}}
-                        <div class="content">
-                            {{!--标题 --}}
-                            <div class="title ellipses">
-                                <span class="private_icon" style="display:block;">
-                                    <span class="title_text" style="max-width: 176px;">
-                                        {{{subject}}}
-                                    </span>
-                                </span>
-                            </div>
-                            {{!--内容片段 --}}
-                            <div class="snippet">
-                                {{{content_snipet}}}
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                {{/each}}
 
 
-             </div>
-            {{/each}}
+
+            </div>
+
         </div>
-        {{/with}}
 
-    </script>
+        {{/compare}}
 
-    <!-- navbar top_bar的js模板 多级联动下拉菜单-->
-    <script id="select-linkage-template" type="text/x-handlebars-template">
-        <!-- 第一级下拉菜单-->
-        {{#if result}}
-        多级筛选：
-        <select name="select_label" id="select_label_1" onchange="click_select_label(this)" >
+        {{#if history}}
+        {{#each history}}
 
-            {{#with result.tags.instructor}}
-            {{#each this}}
-            <option value="{{this}}" >{{this}}</option>
-            {{/each}}
-            {{/with}}
+        {{!-- the students' answer --}}
+        {{#compare type 's_answer'}}
+        <div id="member_answer" class="dashboard_element">
+            <div class="post_region_box answer" id="s_answer">
+                <div class="post_region_header clearFix">
+                    <div class="post_icon s_answer"></div>
+                    <div class="post_title">the students' answer,</div>
+                    <div class="post_subtitle">where students collectively construct a single answer</div>
+                </div>
+                <div class="post_region_content view_mode">
+                    <div class="post_region_text">
+                        {{{content}}}
+                    </div>
 
-        </select>
-        {{/if}}
-        {{#if parent}}
-        {{#with this}}
 
-        {{#each children}}
-        <option value="{{ids}}" >{{tag}}</option>
+
+                </div>
+
+            </div>
+
+        </div>
+        {{else}}
+
+
+        {{!-- the instructors'' answer --}}
+
+        <div id="instructor_answer" class="dashboard_element">
+            <div class="post_region_box answer" id="i_answer">
+                <div class="post_region_header clearFix">
+                    <div class="post_icon i_answer"></div>
+                    <div class="post_title">the instructors' answer,</div>
+                    <div class="post_subtitle">where instructors collectively construct a single answer</div>
+                </div>
+                <div class="post_region_content view_mode">
+                    <div class="post_region_text">{{{content}}}</div>
+
+                </div>
+            </div>
+        </div>
+
+        {{/compare}}
         {{/each}}
-
-        {{/with}}
         {{/if}}
 
-
+        {{/each}}
+        {{/with}}
     </script>
+
+
 
 
 </body>
 </html>
+
+
 
