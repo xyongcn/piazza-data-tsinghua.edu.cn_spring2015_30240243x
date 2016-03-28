@@ -1,6 +1,6 @@
 # get_student_info_lab1.py
 
-       1. 该脚本用于根据edx中 [实验一“实验报告报交”]（http://172.16.14.147:8811/courses/Tsinghua/CS101/2015_T1/courseware/9fef5f36997942edab64944a33fd4ac2/146a389c15a646eaa879fd8e74b54c96/）
+       1. 该脚本用于根据edx中 [实验一“实验报告报交”]（http://crl.ptopenlab.com/:8811/courses/Tsinghua/CS101/2015_T1/courseware/9fef5f36997942edab64944a33fd4ac2/146a389c15a646eaa879fd8e74b54c96/）
        练习的回答结果进行统计。
     
        2. 运行该脚本前需要把get_student_info_lab1()中的参数answer_list_dir换成你clone下来的后台数据路径
