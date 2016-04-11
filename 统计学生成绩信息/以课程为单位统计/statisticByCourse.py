@@ -18,7 +18,8 @@ def saveFile(file_name,data):
     print("already write to "+file_name+".json")
 
 #以课程为单位统计
-def statisticByCourse():
+
+def statisticByCourse():
     #打开excel
     data=open_excel("F:\\test.xlsx")
     #表单"grade"
@@ -27,13 +28,15 @@ def saveFile(file_name,data):
     nrows = table.nrows
     #定义json对象存放统计结果
     result={}
-    #"result"字面量是对象数组，数组的每一个元素是一个课程的信息（包括该课程所有学生的成绩信息）
+    
+#"result"字面量是对象数组，数组的每一个元素是一个课程的信息（包括该课程所有学生的成绩信息）
     result["result"]=[]
     #遍历该表单所有行，进行统计，从第二行开始
     for rownum in range(table.nrows):
         if rownum>0:
             stuObj=table.row_values(rownum)
-            #课程号
+            
+#课程号
             cNo=stuObj[2]
             #课程名
             cName=stuObj[3]
@@ -64,6 +67,7 @@ def saveFile(file_name,data):
                 #如果该课程己经有统计过的记录，则将学生信息直接加入已有课程中
                 for item in result["result"]:
                     if cNo==item["cNo"]:
+                        flag=0
                         item["info"].append(stuInfo)
                         break
                     else:
@@ -80,9 +84,13 @@ def saveFile(file_name,data):
                     result["result"].append(cNew)
     #课程总数
     result["numberOfCourse"]=len(result["result"])
-    #dict 转为 str
+    
+
+    
+#dict 转为 str
     result_json=json.dumps(result)
-    #处理中文
+    
+#处理中文
     jsonStr=json.loads(result_json)
     jsonStr=json.dumps(jsonStr,ensure_ascii=False)
     #保存结果，写入文件
