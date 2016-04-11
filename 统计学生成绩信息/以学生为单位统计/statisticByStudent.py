@@ -26,13 +26,15 @@ def statisticByStudent():
     nrows = table.nrows
     #定义json对象存放统计结果
     result={}
-    #"result"字面量是对象数组，数组的每一个元素是一个学生的信息（包括该学生所有课程的成绩信息）
+    
+#"result"字面量是对象数组，数组的每一个元素是一个学生的信息（包括该学生所有课程的成绩信息）
     result["result"]=[]
     #遍历该表单所有行，进行统计，从第二行开始
     for rownum in range(table.nrows):
         if rownum>0:
             stuObj=table.row_values(rownum)
-            #学号
+            
+            #学号
             sNo=int(stuObj[0])
             #姓名
             sName=stuObj[1]
@@ -61,6 +63,7 @@ def statisticByStudent():
                 #如果该学生己经有统计过的记录，则直接加入新的课程信息
                 for item in result["result"]:
                     if sNo==item["sNo"]:
+                        flag=0
                         item["info"].append(stuInfo)
                         break
                     else:
@@ -75,13 +78,17 @@ def statisticByStudent():
                     result["result"].append(sNew)
     #学生总人数
     result["numberOfStudent"]=len(result["result"])
-    #dict 转为 str
+    
+#dict 转为 str
     result_json=json.dumps(result)
-    #处理中文
+    
+#处理中文
     jsonStr=json.loads(result_json)
     jsonStr=json.dumps(jsonStr,ensure_ascii=False)
     #保存结果，写入文件
     saveFile("statisticByStudent",jsonStr)
-          
+
+    
 if __name__=="__main__":
     statisticByStudent()
+
