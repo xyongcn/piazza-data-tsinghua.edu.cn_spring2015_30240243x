@@ -18,35 +18,11 @@ $(document).ready(function(){
             return options.inverse(this);
         }
     });
-    
-    //获取当前url中包含的参数
-    var url = window.location.search;
-    var args = {};
-    if (url.indexOf('?') != -1) {
-        var str = url.substr(1);
-        var arglist = str.split('&');
-        for (var i in arglist) {
-            argstr = arglist[i];
-            if (argstr != null & argstr != '') {
-                var key = argstr.split('=')[0];
-                var value = argstr.split('=')[1];
-                if (args[key] == undefined) {
-                    args[key] = [];
-                }
-                args[key].push(unescape(value));
-            }
-        }
-    }
-  
-    var tags=args["tags"];
-   //当前url包含参数，直接根据参数进行一次筛选
-    if(tags.length >0){
-        click_tags(tags[0]);
-        clickLi(1);
-    }
-    //否则进初始化
-    else{
 
+
+
+
+        //页面加载时feed部分显示的是my_feed的内容
         url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/piazza_my_feed.json";
         $.ajax({
             type : "get",
@@ -57,7 +33,38 @@ $(document).ready(function(){
                 var source_feed = $("#feed-template").html();
                 var template_feed = Handlebars.compile(source_feed);
                 var html_feed = template_feed(data_json);
-                $("#feed").html(html_feed);}
+                $("#feed").html(html_feed);
+
+                var url = parent.window.location.search;
+                var args = {};
+                if (url.indexOf('?') != -1) {
+                    var str = url.substr(1);
+                    var arglist = str.split('&');
+                    for (var i in arglist) {
+                        argstr = arglist[i];
+                        if (argstr != null & argstr != '') {
+                            var key = argstr.split('=')[0];
+                            var value = argstr.split('=')[1];
+                            if (args[key] == undefined) {
+                                args[key] = [];
+                            }
+                            args[key].push(unescape(value));
+                        }
+                    }
+                }
+
+                var tags=args["tags"];
+                //当前url包含参数，直接根据参数进行一次筛选
+                if(tags.length >0){
+                    click_tags(tags[0]);
+                    clickLi(1);
+                    $("#select_label_1").val(tags[0]);
+
+
+                }
+            }
+
+
         });
 
         //页面加载时page_center部分显示的是cid=1的内容,即piazza的欢迎页面
@@ -95,13 +102,6 @@ $(document).ready(function(){
 
             }
         });
-
-    }
-
-
-
-
-
 
 });
 //page_center
@@ -154,37 +154,6 @@ function click_tags(label){
 }
 
 
-function click_select_label_url(label){
-
-    url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/filter_feed_"+label +".json";
-    $.ajax({
-        type : "get",
-        cache : false,
-        url : url_github , // 请求地址
-        success : function(data) { // ajax执行成功后执行的方法
-            var data_json = eval("(" + data + ")"); // 把string转化为json
-            var source_feed = $("#feed-template").html();
-            var template_feed = Handlebars.compile(source_feed);
-            var html_feed = template_feed(data_json);
-            $("#feed").html(html_feed);
-            //根据第一级所选定的标签生成下一级标签列表
-            var next_data=gen_next_list (label ,data_json);
-
-            next_data = eval("(" + next_data + ")"); // 把string转化为json
-            //添加一个<select>标签
-            addNextSbiling(label,obj.id,label,next_data);
-            //由next_data作为数据源，利用js模板生成下拉菜单
-            var source_select = $("#select-linkage-template").html();
-            var template_select = Handlebars.compile(source_select);
-            var html_select = template_select(next_data);
-            var ID="#"+label;
-            $(ID).html(html_select);
-        }
-    });
-
-
-
-}
 //一级下拉菜单列出所有标签,选择后显示在feed部分，同时根据第一级所选定的标签生成下一级的标签列表和下一级下拉菜单
 function click_select_label(obj){
     var opt = obj.options[obj.selectedIndex]
