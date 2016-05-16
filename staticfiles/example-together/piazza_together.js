@@ -81,7 +81,7 @@ function init(){
             var html = template(data_json);  // json数据传送给html模板
             $("#page_center").html(html);}
     });
-   
+
 
     //页面加载时popular_tags_bar部分显示的是popular tags的内容 ，导航栏显示第一级下拉菜单
     url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/piazza_my_feed.json";
@@ -180,8 +180,9 @@ function gen_multi_selector(obj,tags_arg){
             var html_feed = template_feed(data_json);
             $("#feed").html(html_feed);
             //根据第一级所选定的标签生成下一级标签列表
-            var next_data=gen_next_list (label ,data_json);
 
+            var next_data=gen_next_list (label ,data_json);
+           
            // alert("label="+label+"\nobj_id="+obj.id+"\n"+next_data);
             next_data = eval("(" + next_data + ")"); // 把string转化为json
             //c_tags:根据上一级的选中项生成的当前select所有可选标签
@@ -203,9 +204,10 @@ function gen_multi_selector(obj,tags_arg){
             var html_select = template_select(next_data);
             var ID="#"+label;
             $(ID).html(html_select);
+
             //遍历参数所包含的所有的标签，生成多级select
             for(var i=1;i<tags_arg.length ;i++){
-                
+
                 if(jQuery.inArray(tags_arg[i], c_tags)==-1){
                     alert("您输入的第"+String(i+1)+"个标签不在可选范围内！\n为您显示前"+String(i)+"个标签的筛选结果。");
                     clickLi(init_cid);
@@ -220,7 +222,13 @@ function gen_multi_selector(obj,tags_arg){
                    var c_id="#"+tags_arg [i-1];
                    var Id=tags_arg [i-1];
                    var c_label=tags_arg [i];
-                   var value=$(c_id).val();
+                   var value;
+                    $(c_id+" option").each(function(){
+                        if($(this).text() ===c_label){
+
+                            value=$(this).val();
+                        }
+                    });
 
                 // alert("id="+Id);
                 //alert("c_label:"+c_label);
@@ -595,7 +603,9 @@ function gen_next_taglist(IdArray,select_text,next_data){
 function upd_feed(value,parent)
 {
 
+
     var IdArray = value.split(",");
+
     url_github="https://raw.githubusercontent.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/master/data/piazza-data-filter/filter_feed_"+parent+".json";
     $.ajax({
         type : "get",
