@@ -294,7 +294,10 @@ function clickLi(cid)
         success : function(data) { // ajax执行成功后执行的方法
             var data_json = eval("(" + data + ")"); // 把string转化为json
             var html = template(data_json);  // json数据传送给html模板
-            $("#page_center").html(html);}
+            $("#page_center").html(html);
+            
+            $('#toPiazza').attr("href","https://piazza.com/class/i5j09fnsl7k5x0?cid="+cid);
+             }
     });
 }
 
