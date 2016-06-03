@@ -65,30 +65,12 @@
 
     {{/with}}
     {{/if}}
+     <a  target="_blank" id="toPiazza" href="https://piazza.com/class/i5j09fnsl7k5x0" class="post_action edit main bt6n main btn btn-primary" tutorial="turn to piazza" original-title><font color="white"> <span style="float:right;">&ensp;去Piazza回复&ensp;</span></font></a>&ensp;&ensp;
 
 
 </script>
 
-<!-- popular_tags_list的js模板 动态显示popular标签-->
-<script id="popular-tags-bar-template" type="text/x-handlebars-template">
 
-    <span class="folder_icon"></span>
-    <ul id="popular_tags_list" class="clearFix">
-
-
-        <!-- popular标签列表-->
-        {{#with result.tags.popular}}
-
-        {{#each this}}
-
-        <li ><a class="tag folder" id="{{this}}" onclick="click_tags(id)">{{this}}</a></li>
-        {{/each}}
-
-        {{/with}}
-
-
-    </ul>
-</script>
 
 
 <!--page_center的js模板 显示某一个id对应的讨论记录-->
@@ -190,7 +172,7 @@
     {{/if}}
     {{/each}}
     {{/with}}
-   &ensp;&ensp;<a  target="_blank" id="toPiazza" href="https://piazza.com/class/i5j09fnsl7k5x0" class="post_action edit main bt6n main btn btn-primary" tutorial="turn to piazza" original-title><font color="white">&ensp;去Piazza回复&ensp;</font></a>
+  
 </script>
 
 <!--feed部分的js模板 显示某一个讨论记录的索引列表-->
