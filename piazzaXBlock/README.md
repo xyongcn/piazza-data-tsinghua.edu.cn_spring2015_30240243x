@@ -15,21 +15,33 @@
 
    1.把在线代码编辑器xblock克隆到edx服务器
 
-        sudo git clone https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree/master/piazzaXBlock/piazza_together_xblock
+        sudo git clone https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x.git
+        
+   2.进入到xblock安装目录，更改html
    
-   2.把staticfiles文件夹克隆到edx服务器  
-    
-        sudo git clone https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x/tree/master/staticfiles/example-together/
+        cd piazza-data-tsinghua.edu.cn_spring2015_30240243x/piazzaXBlock/piazza_together_xblock/piazza/static/html/
+        vi piazza.html
+        
+     把所有的166.111.68.45:11133  改为你的open edx域名，保存更改
+        
+       
+       
   
+        
    3.安装xblock
+   
+         cd piazza-data-tsinghua.edu.cn_spring2015_30240243x/piazzaXBlock/piazza_together_xblock/
 
-         sudo -u edxapp /edx/bin/pip.edxapp install /home/zyni/piazza_together_xblock/
-        注意： /home/zyni/piazza_together_xblock/ 替换成你刚刚clone的piazza_together_xblock所在路径
+         sudo -u edxapp /edx/bin/pip.edxapp install .
+      
          
    4.把example-together复制到下面的目录
 
         /edx/var/edxapp/staticfiles/
-        运用命令：sudo cp -r /home/zyni/example-together/ /edx/var/edxapp/staticfiles/
+        
+        cd piazza-data-tsinghua.edu.cn_spring2015_30240243x/
+        
+        运用命令：sudo cp -r staticfiles /edx/var/edxapp/staticfiles/
         
    5.使xblock可用
 
@@ -62,7 +74,8 @@
 
   8.重启edx服务
 
-         sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
+         sudo /edx/bin/supervisorctl restart edxapp:
+         sudo /edx/bin/supervisorctl restart edxapp_worker:
   
 安装好之后就可以在cms中看到并使用该组件
       
