@@ -25,13 +25,10 @@
      把所有的166.111.68.45:11133  改为你的open edx域名，保存更改
         
        
-       
-  
-        
    3.安装xblock
   
-       cd piazza-data-tsinghua.edu.cn_spring2015_30240243x/piazzaXBlock/piazza_together_xblock/
-       sudo -u edxapp /edx/bin/pip.edxapp install .
+        cd piazza-data-tsinghua.edu.cn_spring2015_30240243x/piazzaXBlock/piazza_together_xblock/
+        sudo -u edxapp /edx/bin/pip.edxapp install .
  
          
    4.把example-together复制到下面的目录
