@@ -73,7 +73,7 @@
        1）Edit编辑一个单元
        2）Advanced->piazza
 
-   如果在高级按钮中没有看到piazza选项，通常情况下是权限问题，请确认用户www-data对路径/edx/app/edxapp/lib/python2.7/site-package/piazza以及/edx/app/edxapp/lib/python2.7/site-package/piazza_xblock.egg-info有读权限
+   如果在高级按钮中没有看到piazza选项，通常情况下是权限问题，请确认用户www-data对路径/edx/app/edxapp/venvs/edxapp/lib/python2.7/site-packages/piazza以及/edx/app/edxapp/venvs/edxapp/lib/python2.7/site-packages/piazza_xblock.egg-info有读权限
   
 安装好之后就可以在cms中看到并使用该组件
 
