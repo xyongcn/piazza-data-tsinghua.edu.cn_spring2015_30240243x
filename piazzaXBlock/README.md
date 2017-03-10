@@ -17,7 +17,7 @@
 
         sudo git clone https://github.com/xyongcn/piazza-data-tsinghua.edu.cn_spring2015_30240243x.git
         
-   2.进入到xblock安装目录，更改html
+   2.进入到xblock安装目录，更改piazza.html
    
         cd piazza-data-tsinghua.edu.cn_spring2015_30240243x/piazzaXBlock/piazza_together_xblock/piazza/static/html/
         vi piazza.html
@@ -31,15 +31,15 @@
         sudo -u edxapp /edx/bin/pip.edxapp install .
  
 ```         
-   4.把example-together复制到下面的目录
-
-        /edx/var/edxapp/staticfiles/
+   4.把example-together复制到 /edx/var/edxapp/staticfiles/目录下,并
+      增加所有人对其的读权限 
         
-        cd piazza-data-tsinghua.edu.cn_spring2015_30240243x/
+        cd piazza-data-tsinghua.edu.cn_spring2015_30240243x
         
-        运用命令：sudo cp -r staticfiles /edx/var/edxapp/staticfiles/
+        sudo cp -r staticfiles/* /edx/var/edxapp/staticfiles/
+        sudo chmod a+r -R /edx/var/edxapp/staticfiles/example-together/
         
-   5.使xblock可用
+   5.使xblock可用(如果studio中高级设己开启，此步骤可跳过)
 
      1）edx-platform/lms/envs/common.py中去掉注释：
 
@@ -57,21 +57,25 @@
         改成：
        'ALLOW_ALL_ADVANCED_COMPONENTS': True,
 
-  6.在Studio中把在线代码编辑器block添加到课程的高级设置中。
+  6.重启edx服务（一定不能忘了重启，否则block无法在studio中显示）
+  
+         sudo /edx/bin/supervisorctl restart edxapp:
+         sudo /edx/bin/supervisorctl restart edxapp_worker:
+         
+  7.在Studio中把在线代码编辑器block添加到课程的高级设置中。
 
          1）登录到Studio,打开你的课程
          2）settings->Advanced Setting
          3)把键”advanced_modules”的值改为piazza.
 
-  7.把在线代码编辑器block添加到课程，在studio中
+  8.把在线代码编辑器block添加到课程，在studio中
 
        1）Edit编辑一个单元
        2）Advanced->piazza
 
-  8.重启edx服务
-
-         sudo /edx/bin/supervisorctl restart edxapp:
-         sudo /edx/bin/supervisorctl restart edxapp_worker:
-  
+   如果在高级按钮中没有看到piazza选项，通常情况下是权限问题，请确认用户www-data对路径/edx/app/edxapp/venvs/edxapp/lib/python2.7/site-packages/piazza以及/edx/app/edxapp/venvs/edxapp/lib/python2.7/site-packages/piazza_xblock.egg-info有读权限
+  
 安装好之后就可以在cms中看到并使用该组件
+
+
       
